@@ -1,11 +1,16 @@
 #!/bin/bash
 
-# 更新依赖包
-composer update
-
 # 删除旧的代码
 mkdir -p ./src
-rm -rf ./src/*
+for file in ./src/Netsvr/*; do
+  if [ -d "$file" ] && [ "$(basename "$file")" != "Constant" ]; then
+    rm -rf "$file"
+  fi
+done
+rm -rf ./src/GPBMetadata/*
+
+# 更新依赖包
+composer update
 
 #生成新的代码
 # https://protobuf.dev/reference/php/php-generated/

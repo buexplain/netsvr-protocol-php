@@ -14,8 +14,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Netsvr\\": "src/Netsvr/",
-      "GPBMetadata\\": "src/GPBMetadata"
+      "Netsvr\\": "src/Netsvr/"
     }
   }
 }

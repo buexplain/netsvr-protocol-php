@@ -3,11 +3,11 @@
 # 删除旧的代码
 mkdir -p ./src
 for file in ./src/Netsvr/*; do
-  if [ -d "$file" ] && [ "$(basename "$file")" != "Constant" ]; then
-    rm -rf "$file"
+  if [ "$(basename "$file")" == "Constant.php" ]; then
+    continue;
   fi
+  rm -rf "$file";
 done
-rm -rf ./src/GPBMetadata/*
 
 # 更新依赖包
 composer update

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-namespace Netsvr\Constant;
+namespace Netsvr;
 
 /**
  * 常量约定

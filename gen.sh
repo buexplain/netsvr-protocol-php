@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # 删除旧的代码
-mkdir -p ./src
 for file in ./src/Netsvr/*; do
-  if [ "$(basename "$file")" == "Constant.php" ]; then
+  if [[ "$file" == *"Constant.php" ]]; then
     continue;
   fi
   rm -rf "$file";
+
 done
 
 # 更新依赖包

@@ -16,9 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class RegisterResp extends \Google\Protobuf\Internal\Message
 {
     /**
-     *注册结果：[1：成功，2：解析注册proto协议失败，3：workerId配置错误，溢出允许的范围，4：serverId配置错误，与网关配置的不一致，5：已经注册过，不允许重复发起注册请求]
-     *
-     * Generated from protobuf field <code>int32 code = 1;</code>
+     * Generated from protobuf field <code>.netsvr.registerResp.Code code = 1;</code>
      */
     protected $code = 0;
     /**
@@ -33,7 +31,6 @@ class RegisterResp extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type int $code
-     *          注册结果：[1：成功，2：解析注册proto协议失败，3：workerId配置错误，溢出允许的范围，4：serverId配置错误，与网关配置的不一致，5：已经注册过，不允许重复发起注册请求]
      *     @type string $message
      * }
      */
@@ -43,9 +40,7 @@ class RegisterResp extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *注册结果：[1：成功，2：解析注册proto协议失败，3：workerId配置错误，溢出允许的范围，4：serverId配置错误，与网关配置的不一致，5：已经注册过，不允许重复发起注册请求]
-     *
-     * Generated from protobuf field <code>int32 code = 1;</code>
+     * Generated from protobuf field <code>.netsvr.registerResp.Code code = 1;</code>
      * @return int
      */
     public function getCode()
@@ -54,15 +49,13 @@ class RegisterResp extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *注册结果：[1：成功，2：解析注册proto协议失败，3：workerId配置错误，溢出允许的范围，4：serverId配置错误，与网关配置的不一致，5：已经注册过，不允许重复发起注册请求]
-     *
-     * Generated from protobuf field <code>int32 code = 1;</code>
+     * Generated from protobuf field <code>.netsvr.registerResp.Code code = 1;</code>
      * @param int $var
      * @return $this
      */
     public function setCode($var)
     {
-        GPBUtil::checkInt32($var);
+        GPBUtil::checkEnum($var, \Netsvr\Code::class);
         $this->code = $var;
 
         return $this;

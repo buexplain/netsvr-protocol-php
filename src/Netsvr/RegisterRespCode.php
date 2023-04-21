@@ -7,9 +7,9 @@ namespace Netsvr;
 use UnexpectedValueException;
 
 /**
- * Protobuf type <code>netsvr.registerResp.Code</code>
+ * Protobuf type <code>netsvr.registerResp.RegisterRespCode</code>
  */
-class Code
+class RegisterRespCode
 {
     /**
      *注册成功

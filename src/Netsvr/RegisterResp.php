@@ -16,7 +16,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class RegisterResp extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>.netsvr.registerResp.Code code = 1;</code>
+     * Generated from protobuf field <code>.netsvr.registerResp.RegisterRespCode code = 1;</code>
      */
     protected $code = 0;
     /**
@@ -40,7 +40,7 @@ class RegisterResp extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.netsvr.registerResp.Code code = 1;</code>
+     * Generated from protobuf field <code>.netsvr.registerResp.RegisterRespCode code = 1;</code>
      * @return int
      */
     public function getCode()
@@ -49,13 +49,13 @@ class RegisterResp extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>.netsvr.registerResp.Code code = 1;</code>
+     * Generated from protobuf field <code>.netsvr.registerResp.RegisterRespCode code = 1;</code>
      * @param int $var
      * @return $this
      */
     public function setCode($var)
     {
-        GPBUtil::checkEnum($var, \Netsvr\Code::class);
+        GPBUtil::checkEnum($var, \Netsvr\RegisterRespCode::class);
         $this->code = $var;
 
         return $this;

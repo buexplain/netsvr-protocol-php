@@ -9,9 +9,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>netsvr.metricsResp.MetricsStatusResp</code>
+ * Generated from protobuf message <code>netsvr.metricsResp.MetricsRespItem</code>
  */
-class MetricsStatusResp extends \Google\Protobuf\Internal\Message
+class MetricsRespItem extends \Google\Protobuf\Internal\Message
 {
     /**
      *总数

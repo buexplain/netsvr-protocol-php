@@ -9,9 +9,9 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Generated from protobuf message <code>netsvr.limitReq.LimitUpdateItem</code>
+ * Generated from protobuf message <code>netsvr.limitReq.LimitReqItem</code>
  */
-class LimitUpdateItem extends \Google\Protobuf\Internal\Message
+class LimitReqItem extends \Google\Protobuf\Internal\Message
 {
     /**
      *workerId集合
@@ -20,7 +20,7 @@ class LimitUpdateItem extends \Google\Protobuf\Internal\Message
      */
     private $workerIds;
     /**
-     *限流大小
+     *限流大小，表示workerId每秒接收到的转发量
      *
      * Generated from protobuf field <code>int32 num = 2;</code>
      */
@@ -35,7 +35,7 @@ class LimitUpdateItem extends \Google\Protobuf\Internal\Message
      *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $workerIds
      *          workerId集合
      *     @type int $num
-     *          限流大小
+     *          限流大小，表示workerId每秒接收到的转发量
      * }
      */
     public function __construct($data = NULL) {
@@ -70,7 +70,7 @@ class LimitUpdateItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *限流大小
+     *限流大小，表示workerId每秒接收到的转发量
      *
      * Generated from protobuf field <code>int32 num = 2;</code>
      * @return int
@@ -81,7 +81,7 @@ class LimitUpdateItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *限流大小
+     *限流大小，表示workerId每秒接收到的转发量
      *
      * Generated from protobuf field <code>int32 num = 2;</code>
      * @param int $var

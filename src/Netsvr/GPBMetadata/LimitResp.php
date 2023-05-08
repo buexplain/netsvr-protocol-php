@@ -16,12 +16,12 @@ class LimitResp
         }
         $pool->internalAddGeneratedFile(
             '
-Õ
+Ô
 limitResp.protonetsvr.limitResp"M
-	LimitResp
-ctxData (/
-items (2 .netsvr.limitResp.LimitCountItem"0
-LimitCountItem
+	LimitResp
+serverId (.
+items (2.netsvr.limitResp.LimitRespItem"/
+LimitRespItem
 	workerIds (
 num (B\'Znetsvr/ÊNetsvrâNetsvr\\GPBMetadatabproto3'
         , true);

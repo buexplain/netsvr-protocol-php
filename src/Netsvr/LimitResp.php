@@ -22,7 +22,7 @@ class LimitResp extends \Google\Protobuf\Internal\Message
      */
     protected $serverId = 0;
     /**
-     *每个worker的配置情况
+     *网关服务中的限流器列表
      *
      * Generated from protobuf field <code>repeated .netsvr.limitResp.LimitRespItem items = 2;</code>
      */
@@ -37,7 +37,7 @@ class LimitResp extends \Google\Protobuf\Internal\Message
      *     @type int $serverId
      *          网关唯一编号
      *     @type array<\Netsvr\LimitRespItem>|\Google\Protobuf\Internal\RepeatedField $items
-     *          每个worker的配置情况
+     *          网关服务中的限流器列表
      * }
      */
     public function __construct($data = NULL) {
@@ -72,7 +72,7 @@ class LimitResp extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *每个worker的配置情况
+     *网关服务中的限流器列表
      *
      * Generated from protobuf field <code>repeated .netsvr.limitResp.LimitRespItem items = 2;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -83,7 +83,7 @@ class LimitResp extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *每个worker的配置情况
+     *网关服务中的限流器列表
      *
      * Generated from protobuf field <code>repeated .netsvr.limitResp.LimitRespItem items = 2;</code>
      * @param array<\Netsvr\LimitRespItem>|\Google\Protobuf\Internal\RepeatedField $var

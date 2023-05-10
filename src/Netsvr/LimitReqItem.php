@@ -14,17 +14,17 @@ use Google\Protobuf\Internal\GPBUtil;
 class LimitReqItem extends \Google\Protobuf\Internal\Message
 {
     /**
-     *workerId集合
+     *限流器的名字，如果是无效的名字会被网关忽略掉，不予处理
      *
-     * Generated from protobuf field <code>repeated int32 workerIds = 1;</code>
+     * Generated from protobuf field <code>string name = 1;</code>
      */
-    private $workerIds;
+    protected $name = '';
     /**
-     *限流大小，表示workerId每秒接收到的转发量
+     *限流器的并发设定，如果是小于等于0的值，会被网关忽略掉，不予处理
      *
-     * Generated from protobuf field <code>int32 num = 2;</code>
+     * Generated from protobuf field <code>int32 concurrency = 2;</code>
      */
-    protected $num = 0;
+    protected $concurrency = 0;
 
     /**
      * Constructor.
@@ -32,10 +32,10 @@ class LimitReqItem extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $workerIds
-     *          workerId集合
-     *     @type int $num
-     *          限流大小，表示workerId每秒接收到的转发量
+     *     @type string $name
+     *          限流器的名字，如果是无效的名字会被网关忽略掉，不予处理
+     *     @type int $concurrency
+     *          限流器的并发设定，如果是小于等于0的值，会被网关忽略掉，不予处理
      * }
      */
     public function __construct($data = NULL) {
@@ -44,53 +44,53 @@ class LimitReqItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *workerId集合
+     *限流器的名字，如果是无效的名字会被网关忽略掉，不予处理
      *
-     * Generated from protobuf field <code>repeated int32 workerIds = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * Generated from protobuf field <code>string name = 1;</code>
+     * @return string
      */
-    public function getWorkerIds()
+    public function getName()
     {
-        return $this->workerIds;
+        return $this->name;
     }
 
     /**
-     *workerId集合
+     *限流器的名字，如果是无效的名字会被网关忽略掉，不予处理
      *
-     * Generated from protobuf field <code>repeated int32 workerIds = 1;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * Generated from protobuf field <code>string name = 1;</code>
+     * @param string $var
      * @return $this
      */
-    public function setWorkerIds($var)
+    public function setName($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::INT32);
-        $this->workerIds = $arr;
+        GPBUtil::checkString($var, True);
+        $this->name = $var;
 
         return $this;
     }
 
     /**
-     *限流大小，表示workerId每秒接收到的转发量
+     *限流器的并发设定，如果是小于等于0的值，会被网关忽略掉，不予处理
      *
-     * Generated from protobuf field <code>int32 num = 2;</code>
+     * Generated from protobuf field <code>int32 concurrency = 2;</code>
      * @return int
      */
-    public function getNum()
+    public function getConcurrency()
     {
-        return $this->num;
+        return $this->concurrency;
     }
 
     /**
-     *限流大小，表示workerId每秒接收到的转发量
+     *限流器的并发设定，如果是小于等于0的值，会被网关忽略掉，不予处理
      *
-     * Generated from protobuf field <code>int32 num = 2;</code>
+     * Generated from protobuf field <code>int32 concurrency = 2;</code>
      * @param int $var
      * @return $this
      */
-    public function setNum($var)
+    public function setConcurrency($var)
     {
         GPBUtil::checkInt32($var);
-        $this->num = $var;
+        $this->concurrency = $var;
 
         return $this;
     }

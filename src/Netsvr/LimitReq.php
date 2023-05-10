@@ -9,18 +9,15 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *先更新限流配置，如果传递的值无效，则会忽略它；再返回网关中的最新的限流配置
+ *更新网关服务的限流配置，并返回网关中的最新的限流配置
  *这个配置操作不是永久生效的，网关进程重启后就以config.toml为准
- *如果配置的num是0，则更新不会生效
- *如果限流对象本身是个nilLimit，是个空壳子，则更新不会生效
- *如果nilLimit的情况下，需要限流，则必须重新配置config.toml，并重启网关
  *
  * Generated from protobuf message <code>netsvr.limitReq.LimitReq</code>
  */
 class LimitReq extends \Google\Protobuf\Internal\Message
 {
     /**
-     *要更新的限流配置，如果只想获取网关中的限流配置的真实情况，可以不传递
+     *要更新的限流器
      *
      * Generated from protobuf field <code>repeated .netsvr.limitReq.LimitReqItem items = 1;</code>
      */
@@ -33,7 +30,7 @@ class LimitReq extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type array<\Netsvr\LimitReqItem>|\Google\Protobuf\Internal\RepeatedField $items
-     *          要更新的限流配置，如果只想获取网关中的限流配置的真实情况，可以不传递
+     *          要更新的限流器
      * }
      */
     public function __construct($data = NULL) {
@@ -42,7 +39,7 @@ class LimitReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *要更新的限流配置，如果只想获取网关中的限流配置的真实情况，可以不传递
+     *要更新的限流器
      *
      * Generated from protobuf field <code>repeated .netsvr.limitReq.LimitReqItem items = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -53,7 +50,7 @@ class LimitReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *要更新的限流配置，如果只想获取网关中的限流配置的真实情况，可以不传递
+     *要更新的限流器
      *
      * Generated from protobuf field <code>repeated .netsvr.limitReq.LimitReqItem items = 1;</code>
      * @param array<\Netsvr\LimitReqItem>|\Google\Protobuf\Internal\RepeatedField $var

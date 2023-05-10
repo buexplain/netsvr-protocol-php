@@ -14,17 +14,23 @@ use Google\Protobuf\Internal\GPBUtil;
 class LimitRespItem extends \Google\Protobuf\Internal\Message
 {
     /**
+     *限流器的名字
+     *
+     * Generated from protobuf field <code>string name = 1;</code>
+     */
+    protected $name = '';
+    /**
+     *限流器的并发设定
+     *
+     * Generated from protobuf field <code>int32 concurrency = 2;</code>
+     */
+    protected $concurrency = 0;
+    /**
      *workerId集合
      *
-     * Generated from protobuf field <code>repeated int32 workerIds = 1;</code>
+     * Generated from protobuf field <code>repeated int32 workerIds = 3;</code>
      */
     private $workerIds;
-    /**
-     *限流大小
-     *
-     * Generated from protobuf field <code>int32 num = 2;</code>
-     */
-    protected $num = 0;
 
     /**
      * Constructor.
@@ -32,10 +38,12 @@ class LimitRespItem extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type string $name
+     *          限流器的名字
+     *     @type int $concurrency
+     *          限流器的并发设定
      *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $workerIds
      *          workerId集合
-     *     @type int $num
-     *          限流大小
      * }
      */
     public function __construct($data = NULL) {
@@ -44,9 +52,61 @@ class LimitRespItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *限流器的名字
+     *
+     * Generated from protobuf field <code>string name = 1;</code>
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     *限流器的名字
+     *
+     * Generated from protobuf field <code>string name = 1;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setName($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->name = $var;
+
+        return $this;
+    }
+
+    /**
+     *限流器的并发设定
+     *
+     * Generated from protobuf field <code>int32 concurrency = 2;</code>
+     * @return int
+     */
+    public function getConcurrency()
+    {
+        return $this->concurrency;
+    }
+
+    /**
+     *限流器的并发设定
+     *
+     * Generated from protobuf field <code>int32 concurrency = 2;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setConcurrency($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->concurrency = $var;
+
+        return $this;
+    }
+
+    /**
      *workerId集合
      *
-     * Generated from protobuf field <code>repeated int32 workerIds = 1;</code>
+     * Generated from protobuf field <code>repeated int32 workerIds = 3;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getWorkerIds()
@@ -57,7 +117,7 @@ class LimitRespItem extends \Google\Protobuf\Internal\Message
     /**
      *workerId集合
      *
-     * Generated from protobuf field <code>repeated int32 workerIds = 1;</code>
+     * Generated from protobuf field <code>repeated int32 workerIds = 3;</code>
      * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */
@@ -65,32 +125,6 @@ class LimitRespItem extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::INT32);
         $this->workerIds = $arr;
-
-        return $this;
-    }
-
-    /**
-     *限流大小
-     *
-     * Generated from protobuf field <code>int32 num = 2;</code>
-     * @return int
-     */
-    public function getNum()
-    {
-        return $this->num;
-    }
-
-    /**
-     *限流大小
-     *
-     * Generated from protobuf field <code>int32 num = 2;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setNum($var)
-    {
-        GPBUtil::checkInt32($var);
-        $this->num = $var;
 
         return $this;
     }

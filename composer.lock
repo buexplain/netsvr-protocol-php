@@ -9,16 +9,16 @@
     "packages-dev": [
         {
             "name": "buexplain/netsvr-protocol",
-            "version": "v1.0.0",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/buexplain/netsvr-protocol.git",
-                "reference": "e27d207804504612d4dca71cfd94d96ee4d03dc0"
+                "reference": "38fa0688cf9feab0e951a0242057e46ecdac178e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/buexplain/netsvr-protocol/zipball/e27d207804504612d4dca71cfd94d96ee4d03dc0",
-                "reference": "e27d207804504612d4dca71cfd94d96ee4d03dc0",
+                "url": "https://api.github.com/repos/buexplain/netsvr-protocol/zipball/38fa0688cf9feab0e951a0242057e46ecdac178e",
+                "reference": "38fa0688cf9feab0e951a0242057e46ecdac178e",
                 "shasum": ""
             },
             "require": {
@@ -38,9 +38,9 @@
             "description": "https://github.com/buexplain/netsvr的协议",
             "support": {
                 "issues": "https://github.com/buexplain/netsvr-protocol/issues",
-                "source": "https://github.com/buexplain/netsvr-protocol/tree/v1.0.0"
+                "source": "https://github.com/buexplain/netsvr-protocol/tree/v1.1.0"
             },
-            "time": "2023-06-18T04:28:00+00:00"
+            "time": "2023-07-18T02:02:40+00:00"
         }
     ],
     "aliases": [],

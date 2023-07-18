@@ -16,10 +16,11 @@ class ConnOpenCustomUniqIdTokenResp
         }
         $pool->internalAddGeneratedFile(
             '
-­
-#connOpenCustomUniqIdTokenResp.proto$netsvr.connOpenCustomUniqIdTokenResp"/
+¼
+#connOpenCustomUniqIdTokenResp.proto$netsvr.connOpenCustomUniqIdTokenResp">
 ConnOpenCustomUniqIdTokenResp
-uniqId (	B\'Znetsvr/ÊNetsvrâNetsvr\\GPBMetadatabproto3'
+uniqId (	
+token (	B\'Znetsvr/ÊNetsvrâNetsvr\\GPBMetadatabproto3'
         , true);
 
         static::$is_initialized = true;

@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *worker响应business，返回一个可用的uniqId
+ *worker响应business，返回uniqId、token
  *
  * Generated from protobuf message <code>netsvr.connOpenCustomUniqIdTokenResp.ConnOpenCustomUniqIdTokenResp</code>
  */
@@ -21,6 +21,12 @@ class ConnOpenCustomUniqIdTokenResp extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string uniqId = 1;</code>
      */
     protected $uniqId = '';
+    /**
+     *网关生成的一次性token
+     *
+     * Generated from protobuf field <code>string token = 2;</code>
+     */
+    protected $token = '';
 
     /**
      * Constructor.
@@ -30,6 +36,8 @@ class ConnOpenCustomUniqIdTokenResp extends \Google\Protobuf\Internal\Message
      *
      *     @type string $uniqId
      *          网关生成的uniqId
+     *     @type string $token
+     *          网关生成的一次性token
      * }
      */
     public function __construct($data = NULL) {
@@ -59,6 +67,32 @@ class ConnOpenCustomUniqIdTokenResp extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->uniqId = $var;
+
+        return $this;
+    }
+
+    /**
+     *网关生成的一次性token
+     *
+     * Generated from protobuf field <code>string token = 2;</code>
+     * @return string
+     */
+    public function getToken()
+    {
+        return $this->token;
+    }
+
+    /**
+     *网关生成的一次性token
+     *
+     * Generated from protobuf field <code>string token = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setToken($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->token = $var;
 
         return $this;
     }

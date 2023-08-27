@@ -9,7 +9,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- *business向worker请求，给某个主题发布信息
+ *business向worker请求，给某几个主题发布信息，一份消息发布到多个主题
  *
  * Generated from protobuf message <code>netsvr.topicPublish.TopicPublish</code>
  */

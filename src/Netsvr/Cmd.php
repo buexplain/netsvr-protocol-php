@@ -98,6 +98,12 @@ class Cmd
      */
     const TopicPublish = 900002010;
     /**
+     *批量发布
+     *
+     * Generated from protobuf enum <code>TopicPublishBulk = 900002013;</code>
+     */
+    const TopicPublishBulk = 900002013;
+    /**
      *强制关闭某个连接
      *
      * Generated from protobuf enum <code>ForceOffline = 900002011;</code>
@@ -203,6 +209,7 @@ class Cmd
         self::TopicUnsubscribe => 'TopicUnsubscribe',
         self::TopicDelete => 'TopicDelete',
         self::TopicPublish => 'TopicPublish',
+        self::TopicPublishBulk => 'TopicPublishBulk',
         self::ForceOffline => 'ForceOffline',
         self::ForceOfflineGuest => 'ForceOfflineGuest',
         self::Register => 'Register',

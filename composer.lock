@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b2d48ed34b6eddb6186e466db7c96026",
+    "content-hash": "4fe517225b50dadca3a86207d53459f2",
     "packages": [],
     "packages-dev": [
         {
             "name": "buexplain/netsvr-protocol",
-            "version": "v1.3.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/buexplain/netsvr-protocol.git",
-                "reference": "bb076170461214f61269cbe3aa68286f2fc9e1a2"
+                "reference": "0b52b56ac7c4fec6204aff271c22378964dee83f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/buexplain/netsvr-protocol/zipball/bb076170461214f61269cbe3aa68286f2fc9e1a2",
-                "reference": "bb076170461214f61269cbe3aa68286f2fc9e1a2",
+                "url": "https://api.github.com/repos/buexplain/netsvr-protocol/zipball/0b52b56ac7c4fec6204aff271c22378964dee83f",
+                "reference": "0b52b56ac7c4fec6204aff271c22378964dee83f",
                 "shasum": ""
             },
             "require": {
@@ -38,9 +38,9 @@
             "description": "https://github.com/buexplain/netsvr的协议",
             "support": {
                 "issues": "https://github.com/buexplain/netsvr-protocol/issues",
-                "source": "https://github.com/buexplain/netsvr-protocol/tree/v1.3.0"
+                "source": "https://github.com/buexplain/netsvr-protocol/tree/v1.4.0"
             },
-            "time": "2023-08-27T03:36:41+00:00"
+            "time": "2023-09-03T03:14:57+00:00"
         }
     ],
     "aliases": [],

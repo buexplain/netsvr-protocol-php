@@ -23,6 +23,12 @@ class RegisterResp extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>string message = 2;</code>
      */
     protected $message = '';
+    /**
+     *注册成功后的id
+     *
+     * Generated from protobuf field <code>string registerId = 3;</code>
+     */
+    protected $registerId = '';
 
     /**
      * Constructor.
@@ -32,6 +38,8 @@ class RegisterResp extends \Google\Protobuf\Internal\Message
      *
      *     @type int $code
      *     @type string $message
+     *     @type string $registerId
+     *          注册成功后的id
      * }
      */
     public function __construct($data = NULL) {
@@ -79,6 +87,32 @@ class RegisterResp extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->message = $var;
+
+        return $this;
+    }
+
+    /**
+     *注册成功后的id
+     *
+     * Generated from protobuf field <code>string registerId = 3;</code>
+     * @return string
+     */
+    public function getRegisterId()
+    {
+        return $this->registerId;
+    }
+
+    /**
+     *注册成功后的id
+     *
+     * Generated from protobuf field <code>string registerId = 3;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setRegisterId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->registerId = $var;
 
         return $this;
     }

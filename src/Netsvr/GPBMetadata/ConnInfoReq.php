@@ -16,10 +16,14 @@ class ConnInfoReq
         }
         $pool->internalAddGeneratedFile(
             '
-x
-connInfoReq.protonetsvr.connInfoReq"
+µ
+connInfoReq.protonetsvr.connInfoReq"[
 ConnInfoReq
-uniqIds (	B\'Znetsvr/ÊNetsvrâNetsvr\\GPBMetadatabproto3'
+uniqIds (	
+
+reqSession (
+reqCustomerId (
+reqTopic (B\'Znetsvr/ÊNetsvrâNetsvr\\GPBMetadatabproto3'
         , true);
 
         static::$is_initialized = true;

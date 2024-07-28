@@ -26,9 +26,9 @@ class RegisterResp extends \Google\Protobuf\Internal\Message
     /**
      *注册成功后的id
      *
-     * Generated from protobuf field <code>string registerId = 3;</code>
+     * Generated from protobuf field <code>string connId = 3;</code>
      */
-    protected $registerId = '';
+    protected $connId = '';
 
     /**
      * Constructor.
@@ -38,7 +38,7 @@ class RegisterResp extends \Google\Protobuf\Internal\Message
      *
      *     @type int $code
      *     @type string $message
-     *     @type string $registerId
+     *     @type string $connId
      *          注册成功后的id
      * }
      */
@@ -94,25 +94,25 @@ class RegisterResp extends \Google\Protobuf\Internal\Message
     /**
      *注册成功后的id
      *
-     * Generated from protobuf field <code>string registerId = 3;</code>
+     * Generated from protobuf field <code>string connId = 3;</code>
      * @return string
      */
-    public function getRegisterId()
+    public function getConnId()
     {
-        return $this->registerId;
+        return $this->connId;
     }
 
     /**
      *注册成功后的id
      *
-     * Generated from protobuf field <code>string registerId = 3;</code>
+     * Generated from protobuf field <code>string connId = 3;</code>
      * @param string $var
      * @return $this
      */
-    public function setRegisterId($var)
+    public function setConnId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->registerId = $var;
+        $this->connId = $var;
 
         return $this;
     }

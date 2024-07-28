@@ -16,15 +16,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class MetricsResp extends \Google\Protobuf\Internal\Message
 {
     /**
-     *网关唯一编号
-     *
-     * Generated from protobuf field <code>int32 serverId = 1;</code>
-     */
-    protected $serverId = 0;
-    /**
      *key是统计的项，value是统计结果
      *
-     * Generated from protobuf field <code>map<int32, .netsvr.metricsResp.MetricsRespItem> items = 2;</code>
+     * Generated from protobuf field <code>map<int32, .netsvr.metricsResp.MetricsRespItem> items = 1;</code>
      */
     private $items;
 
@@ -34,8 +28,6 @@ class MetricsResp extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int $serverId
-     *          网关唯一编号
      *     @type array|\Google\Protobuf\Internal\MapField $items
      *          key是统计的项，value是统计结果
      * }
@@ -46,35 +38,9 @@ class MetricsResp extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *网关唯一编号
-     *
-     * Generated from protobuf field <code>int32 serverId = 1;</code>
-     * @return int
-     */
-    public function getServerId()
-    {
-        return $this->serverId;
-    }
-
-    /**
-     *网关唯一编号
-     *
-     * Generated from protobuf field <code>int32 serverId = 1;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setServerId($var)
-    {
-        GPBUtil::checkInt32($var);
-        $this->serverId = $var;
-
-        return $this;
-    }
-
-    /**
      *key是统计的项，value是统计结果
      *
-     * Generated from protobuf field <code>map<int32, .netsvr.metricsResp.MetricsRespItem> items = 2;</code>
+     * Generated from protobuf field <code>map<int32, .netsvr.metricsResp.MetricsRespItem> items = 1;</code>
      * @return \Google\Protobuf\Internal\MapField
      */
     public function getItems()
@@ -85,7 +51,7 @@ class MetricsResp extends \Google\Protobuf\Internal\Message
     /**
      *key是统计的项，value是统计结果
      *
-     * Generated from protobuf field <code>map<int32, .netsvr.metricsResp.MetricsRespItem> items = 2;</code>
+     * Generated from protobuf field <code>map<int32, .netsvr.metricsResp.MetricsRespItem> items = 1;</code>
      * @param array|\Google\Protobuf\Internal\MapField $var
      * @return $this
      */

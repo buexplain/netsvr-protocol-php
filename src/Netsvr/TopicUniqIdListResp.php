@@ -16,12 +16,6 @@ use Google\Protobuf\Internal\GPBUtil;
 class TopicUniqIdListResp extends \Google\Protobuf\Internal\Message
 {
     /**
-     *网关唯一编号
-     *
-     * Generated from protobuf field <code>int32 serverId = 1;</code>
-     */
-    protected $serverId = 0;
-    /**
      *key是topic，value是该主题包含的uniqId
      *如果请求的topic没找到，则items中不会有该topic
      *
@@ -35,8 +29,6 @@ class TopicUniqIdListResp extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int $serverId
-     *          网关唯一编号
      *     @type array|\Google\Protobuf\Internal\MapField $items
      *          key是topic，value是该主题包含的uniqId
      *          如果请求的topic没找到，则items中不会有该topic
@@ -45,32 +37,6 @@ class TopicUniqIdListResp extends \Google\Protobuf\Internal\Message
     public function __construct($data = NULL) {
         \Netsvr\GPBMetadata\TopicUniqIdListResp::initOnce();
         parent::__construct($data);
-    }
-
-    /**
-     *网关唯一编号
-     *
-     * Generated from protobuf field <code>int32 serverId = 1;</code>
-     * @return int
-     */
-    public function getServerId()
-    {
-        return $this->serverId;
-    }
-
-    /**
-     *网关唯一编号
-     *
-     * Generated from protobuf field <code>int32 serverId = 1;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setServerId($var)
-    {
-        GPBUtil::checkInt32($var);
-        $this->serverId = $var;
-
-        return $this;
     }
 
     /**

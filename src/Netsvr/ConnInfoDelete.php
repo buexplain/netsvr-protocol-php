@@ -22,17 +22,17 @@ class ConnInfoDelete extends \Google\Protobuf\Internal\Message
      */
     protected $uniqId = '';
     /**
-     *是否删除uniqId，[true：让网关随机生成一个新的uniqId，false：不处理]
-     *
-     * Generated from protobuf field <code>bool delUniqId = 2;</code>
-     */
-    protected $delUniqId = false;
-    /**
      *是否删除session，[true：让网关设置session为空字符串，false：不处理]
      *
-     * Generated from protobuf field <code>bool delSession = 3;</code>
+     * Generated from protobuf field <code>bool delSession = 2;</code>
      */
     protected $delSession = false;
+    /**
+     *是否删除customerId，[true：让网关设置customerId为空字符串，false：不处理]
+     *
+     * Generated from protobuf field <code>bool delCustomerId = 3;</code>
+     */
+    protected $delCustomerId = false;
     /**
      *是否删除topic，[true：让网关设置topic为空[]string，false：不处理]
      *
@@ -54,10 +54,10 @@ class ConnInfoDelete extends \Google\Protobuf\Internal\Message
      *
      *     @type string $uniqId
      *          目标uniqId
-     *     @type bool $delUniqId
-     *          是否删除uniqId，[true：让网关随机生成一个新的uniqId，false：不处理]
      *     @type bool $delSession
      *          是否删除session，[true：让网关设置session为空字符串，false：不处理]
+     *     @type bool $delCustomerId
+     *          是否删除customerId，[true：让网关设置customerId为空字符串，false：不处理]
      *     @type bool $delTopic
      *          是否删除topic，[true：让网关设置topic为空[]string，false：不处理]
      *     @type string $data
@@ -96,35 +96,9 @@ class ConnInfoDelete extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *是否删除uniqId，[true：让网关随机生成一个新的uniqId，false：不处理]
-     *
-     * Generated from protobuf field <code>bool delUniqId = 2;</code>
-     * @return bool
-     */
-    public function getDelUniqId()
-    {
-        return $this->delUniqId;
-    }
-
-    /**
-     *是否删除uniqId，[true：让网关随机生成一个新的uniqId，false：不处理]
-     *
-     * Generated from protobuf field <code>bool delUniqId = 2;</code>
-     * @param bool $var
-     * @return $this
-     */
-    public function setDelUniqId($var)
-    {
-        GPBUtil::checkBool($var);
-        $this->delUniqId = $var;
-
-        return $this;
-    }
-
-    /**
      *是否删除session，[true：让网关设置session为空字符串，false：不处理]
      *
-     * Generated from protobuf field <code>bool delSession = 3;</code>
+     * Generated from protobuf field <code>bool delSession = 2;</code>
      * @return bool
      */
     public function getDelSession()
@@ -135,7 +109,7 @@ class ConnInfoDelete extends \Google\Protobuf\Internal\Message
     /**
      *是否删除session，[true：让网关设置session为空字符串，false：不处理]
      *
-     * Generated from protobuf field <code>bool delSession = 3;</code>
+     * Generated from protobuf field <code>bool delSession = 2;</code>
      * @param bool $var
      * @return $this
      */
@@ -143,6 +117,32 @@ class ConnInfoDelete extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkBool($var);
         $this->delSession = $var;
+
+        return $this;
+    }
+
+    /**
+     *是否删除customerId，[true：让网关设置customerId为空字符串，false：不处理]
+     *
+     * Generated from protobuf field <code>bool delCustomerId = 3;</code>
+     * @return bool
+     */
+    public function getDelCustomerId()
+    {
+        return $this->delCustomerId;
+    }
+
+    /**
+     *是否删除customerId，[true：让网关设置customerId为空字符串，false：不处理]
+     *
+     * Generated from protobuf field <code>bool delCustomerId = 3;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setDelCustomerId($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->delCustomerId = $var;
 
         return $this;
     }

@@ -14,57 +14,63 @@ use Google\Protobuf\Internal\GPBUtil;
 class MetricsRespItem extends \Google\Protobuf\Internal\Message
 {
     /**
+     *统计的项
+     *
+     * Generated from protobuf field <code>int32 item = 1;</code>
+     */
+    protected $item = 0;
+    /**
      *总数
      *
-     * Generated from protobuf field <code>int64 count = 1;</code>
+     * Generated from protobuf field <code>int64 count = 2;</code>
      */
     protected $count = 0;
     /**
      *每秒速率
      *
-     * Generated from protobuf field <code>float meanRate = 2;</code>
+     * Generated from protobuf field <code>float meanRate = 3;</code>
      */
     protected $meanRate = 0.0;
     /**
      *每秒速率的最大值
      *
-     * Generated from protobuf field <code>float meanRateMax = 3;</code>
+     * Generated from protobuf field <code>float meanRateMax = 4;</code>
      */
     protected $meanRateMax = 0.0;
     /**
      *每1分钟速率
      *
-     * Generated from protobuf field <code>float rate1 = 4;</code>
+     * Generated from protobuf field <code>float rate1 = 5;</code>
      */
     protected $rate1 = 0.0;
     /**
      *每1分钟速率的最大值
      *
-     * Generated from protobuf field <code>float rate1Max = 5;</code>
+     * Generated from protobuf field <code>float rate1Max = 6;</code>
      */
     protected $rate1Max = 0.0;
     /**
      *每5分钟速率
      *
-     * Generated from protobuf field <code>float rate5 = 6;</code>
+     * Generated from protobuf field <code>float rate5 = 7;</code>
      */
     protected $rate5 = 0.0;
     /**
      *每5分钟速率的最大值
      *
-     * Generated from protobuf field <code>float rate5Max = 7;</code>
+     * Generated from protobuf field <code>float rate5Max = 8;</code>
      */
     protected $rate5Max = 0.0;
     /**
      *每15分钟速率
      *
-     * Generated from protobuf field <code>float rate15 = 8;</code>
+     * Generated from protobuf field <code>float rate15 = 9;</code>
      */
     protected $rate15 = 0.0;
     /**
      *每15分钟速率的最大值
      *
-     * Generated from protobuf field <code>float rate15Max = 9;</code>
+     * Generated from protobuf field <code>float rate15Max = 10;</code>
      */
     protected $rate15Max = 0.0;
 
@@ -74,6 +80,8 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
+     *     @type int $item
+     *          统计的项
      *     @type int|string $count
      *          总数
      *     @type float $meanRate
@@ -100,9 +108,35 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *统计的项
+     *
+     * Generated from protobuf field <code>int32 item = 1;</code>
+     * @return int
+     */
+    public function getItem()
+    {
+        return $this->item;
+    }
+
+    /**
+     *统计的项
+     *
+     * Generated from protobuf field <code>int32 item = 1;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setItem($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->item = $var;
+
+        return $this;
+    }
+
+    /**
      *总数
      *
-     * Generated from protobuf field <code>int64 count = 1;</code>
+     * Generated from protobuf field <code>int64 count = 2;</code>
      * @return int|string
      */
     public function getCount()
@@ -113,7 +147,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     /**
      *总数
      *
-     * Generated from protobuf field <code>int64 count = 1;</code>
+     * Generated from protobuf field <code>int64 count = 2;</code>
      * @param int|string $var
      * @return $this
      */
@@ -128,7 +162,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     /**
      *每秒速率
      *
-     * Generated from protobuf field <code>float meanRate = 2;</code>
+     * Generated from protobuf field <code>float meanRate = 3;</code>
      * @return float
      */
     public function getMeanRate()
@@ -139,7 +173,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     /**
      *每秒速率
      *
-     * Generated from protobuf field <code>float meanRate = 2;</code>
+     * Generated from protobuf field <code>float meanRate = 3;</code>
      * @param float $var
      * @return $this
      */
@@ -154,7 +188,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     /**
      *每秒速率的最大值
      *
-     * Generated from protobuf field <code>float meanRateMax = 3;</code>
+     * Generated from protobuf field <code>float meanRateMax = 4;</code>
      * @return float
      */
     public function getMeanRateMax()
@@ -165,7 +199,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     /**
      *每秒速率的最大值
      *
-     * Generated from protobuf field <code>float meanRateMax = 3;</code>
+     * Generated from protobuf field <code>float meanRateMax = 4;</code>
      * @param float $var
      * @return $this
      */
@@ -180,7 +214,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     /**
      *每1分钟速率
      *
-     * Generated from protobuf field <code>float rate1 = 4;</code>
+     * Generated from protobuf field <code>float rate1 = 5;</code>
      * @return float
      */
     public function getRate1()
@@ -191,7 +225,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     /**
      *每1分钟速率
      *
-     * Generated from protobuf field <code>float rate1 = 4;</code>
+     * Generated from protobuf field <code>float rate1 = 5;</code>
      * @param float $var
      * @return $this
      */
@@ -206,7 +240,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     /**
      *每1分钟速率的最大值
      *
-     * Generated from protobuf field <code>float rate1Max = 5;</code>
+     * Generated from protobuf field <code>float rate1Max = 6;</code>
      * @return float
      */
     public function getRate1Max()
@@ -217,7 +251,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     /**
      *每1分钟速率的最大值
      *
-     * Generated from protobuf field <code>float rate1Max = 5;</code>
+     * Generated from protobuf field <code>float rate1Max = 6;</code>
      * @param float $var
      * @return $this
      */
@@ -232,7 +266,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     /**
      *每5分钟速率
      *
-     * Generated from protobuf field <code>float rate5 = 6;</code>
+     * Generated from protobuf field <code>float rate5 = 7;</code>
      * @return float
      */
     public function getRate5()
@@ -243,7 +277,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     /**
      *每5分钟速率
      *
-     * Generated from protobuf field <code>float rate5 = 6;</code>
+     * Generated from protobuf field <code>float rate5 = 7;</code>
      * @param float $var
      * @return $this
      */
@@ -258,7 +292,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     /**
      *每5分钟速率的最大值
      *
-     * Generated from protobuf field <code>float rate5Max = 7;</code>
+     * Generated from protobuf field <code>float rate5Max = 8;</code>
      * @return float
      */
     public function getRate5Max()
@@ -269,7 +303,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     /**
      *每5分钟速率的最大值
      *
-     * Generated from protobuf field <code>float rate5Max = 7;</code>
+     * Generated from protobuf field <code>float rate5Max = 8;</code>
      * @param float $var
      * @return $this
      */
@@ -284,7 +318,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     /**
      *每15分钟速率
      *
-     * Generated from protobuf field <code>float rate15 = 8;</code>
+     * Generated from protobuf field <code>float rate15 = 9;</code>
      * @return float
      */
     public function getRate15()
@@ -295,7 +329,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     /**
      *每15分钟速率
      *
-     * Generated from protobuf field <code>float rate15 = 8;</code>
+     * Generated from protobuf field <code>float rate15 = 9;</code>
      * @param float $var
      * @return $this
      */
@@ -310,7 +344,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     /**
      *每15分钟速率的最大值
      *
-     * Generated from protobuf field <code>float rate15Max = 9;</code>
+     * Generated from protobuf field <code>float rate15Max = 10;</code>
      * @return float
      */
     public function getRate15Max()
@@ -321,7 +355,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     /**
      *每15分钟速率的最大值
      *
-     * Generated from protobuf field <code>float rate15Max = 9;</code>
+     * Generated from protobuf field <code>float rate15Max = 10;</code>
      * @param float $var
      * @return $this
      */

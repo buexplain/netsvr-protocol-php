@@ -16,17 +16,19 @@ class ConnInfoResp
         }
         $pool->internalAddGeneratedFile(
             '
-²
+Æ
 connInfoResp.protonetsvr.connInfoResp" 
 ConnInfoResp;
 items (2,.netsvr.connInfoResp.ConnInfoResp.ItemsEntryS
 
 ItemsEntry
 key (	4
-value (2%.netsvr.connInfoResp.ConnInfoRespItem:8"3
+value (2%.netsvr.connInfoResp.ConnInfoRespItem:8"G
 ConnInfoRespItem
-session (	
-topics (	B\'Znetsvr/ÊNetsvrâNetsvr\\GPBMetadatabproto3'
+session (	
+
+customerId (	
+topics (	B\'Znetsvr/ÊNetsvrâNetsvr\\GPBMetadatabproto3'
         , true);
 
         static::$is_initialized = true;

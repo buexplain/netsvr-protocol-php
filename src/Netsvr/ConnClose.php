@@ -16,13 +16,29 @@ use Google\Protobuf\Internal\GPBUtil;
 class ConnClose extends \Google\Protobuf\Internal\Message
 {
     /**
+     *客户在网关中的唯一id
+     *
      * Generated from protobuf field <code>string uniqId = 1;</code>
      */
     protected $uniqId = '';
     /**
-     * Generated from protobuf field <code>string session = 2;</code>
+     *客户在业务系统中的唯一id
+     *
+     * Generated from protobuf field <code>string customerId = 2;</code>
+     */
+    protected $customerId = '';
+    /**
+     *客户存储在网关中的数据
+     *
+     * Generated from protobuf field <code>string session = 3;</code>
      */
     protected $session = '';
+    /**
+     *客户订阅的主题
+     *
+     * Generated from protobuf field <code>repeated string topics = 4;</code>
+     */
+    private $topics;
 
     /**
      * Constructor.
@@ -31,7 +47,13 @@ class ConnClose extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $uniqId
+     *          客户在网关中的唯一id
+     *     @type string $customerId
+     *          客户在业务系统中的唯一id
      *     @type string $session
+     *          客户存储在网关中的数据
+     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $topics
+     *          客户订阅的主题
      * }
      */
     public function __construct($data = NULL) {
@@ -40,6 +62,8 @@ class ConnClose extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *客户在网关中的唯一id
+     *
      * Generated from protobuf field <code>string uniqId = 1;</code>
      * @return string
      */
@@ -49,6 +73,8 @@ class ConnClose extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *客户在网关中的唯一id
+     *
      * Generated from protobuf field <code>string uniqId = 1;</code>
      * @param string $var
      * @return $this
@@ -62,7 +88,35 @@ class ConnClose extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string session = 2;</code>
+     *客户在业务系统中的唯一id
+     *
+     * Generated from protobuf field <code>string customerId = 2;</code>
+     * @return string
+     */
+    public function getCustomerId()
+    {
+        return $this->customerId;
+    }
+
+    /**
+     *客户在业务系统中的唯一id
+     *
+     * Generated from protobuf field <code>string customerId = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setCustomerId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->customerId = $var;
+
+        return $this;
+    }
+
+    /**
+     *客户存储在网关中的数据
+     *
+     * Generated from protobuf field <code>string session = 3;</code>
      * @return string
      */
     public function getSession()
@@ -71,7 +125,9 @@ class ConnClose extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>string session = 2;</code>
+     *客户存储在网关中的数据
+     *
+     * Generated from protobuf field <code>string session = 3;</code>
      * @param string $var
      * @return $this
      */
@@ -79,6 +135,32 @@ class ConnClose extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->session = $var;
+
+        return $this;
+    }
+
+    /**
+     *客户订阅的主题
+     *
+     * Generated from protobuf field <code>repeated string topics = 4;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
+     */
+    public function getTopics()
+    {
+        return $this->topics;
+    }
+
+    /**
+     *客户订阅的主题
+     *
+     * Generated from protobuf field <code>repeated string topics = 4;</code>
+     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
+     */
+    public function setTopics($var)
+    {
+        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
+        $this->topics = $arr;
 
         return $this;
     }

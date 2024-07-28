@@ -14,7 +14,7 @@ use UnexpectedValueException;
 class Cmd
 {
     /**
-     *毫无意义的占位符，目的是避免枚举从零开始，另外把指令搞大一点的目的是避免和business的指令段冲突
+     *毫无意义的占位符，目的是避免枚举从零开始
      *
      * Generated from protobuf enum <code>Placeholder = 0;</code>
      */
@@ -26,13 +26,13 @@ class Cmd
      */
     const ConnOpen = 900001001;
     /**
-     *连接关闭
+     *websocket连接关闭
      *
      * Generated from protobuf enum <code>ConnClose = 900001002;</code>
      */
     const ConnClose = 900001002;
     /**
-     *透传客户数据
+     *透传客户端的websocket数据
      *
      * Generated from protobuf enum <code>Transfer = 900001003;</code>
      */
@@ -44,7 +44,7 @@ class Cmd
      */
     const ConnInfoUpdate = 900002001;
     /**
-     *删除连接的info信息
+     *删除连接的信息
      *
      * Generated from protobuf enum <code>ConnInfoDelete = 900002002;</code>
      */
@@ -56,65 +56,89 @@ class Cmd
      */
     const Broadcast = 900002003;
     /**
-     *组播
+     *根据uniqId组播
      *
      * Generated from protobuf enum <code>Multicast = 900002004;</code>
      */
     const Multicast = 900002004;
     /**
-     *单播
+     *根据customerId组播
      *
-     * Generated from protobuf enum <code>SingleCast = 900002005;</code>
+     * Generated from protobuf enum <code>MulticastByCustomerId = 900002005;</code>
      */
-    const SingleCast = 900002005;
+    const MulticastByCustomerId = 900002005;
     /**
-     *批量单播
+     *根据uniqId单播
      *
-     * Generated from protobuf enum <code>SingleCastBulk = 900002006;</code>
+     * Generated from protobuf enum <code>SingleCast = 900002006;</code>
      */
-    const SingleCastBulk = 900002006;
+    const SingleCast = 900002006;
     /**
-     *订阅
+     *根据uniqId批量单播
      *
-     * Generated from protobuf enum <code>TopicSubscribe = 900002007;</code>
+     * Generated from protobuf enum <code>SingleCastBulk = 900002007;</code>
      */
-    const TopicSubscribe = 900002007;
+    const SingleCastBulk = 900002007;
     /**
-     *取消订阅
+     *根据customerId单播
      *
-     * Generated from protobuf enum <code>TopicUnsubscribe = 900002008;</code>
+     * Generated from protobuf enum <code>SingleCastByCustomerId = 900002008;</code>
      */
-    const TopicUnsubscribe = 900002008;
+    const SingleCastByCustomerId = 900002008;
     /**
-     *删除主题
+     *根据customerId批量单播
      *
-     * Generated from protobuf enum <code>TopicDelete = 900002009;</code>
+     * Generated from protobuf enum <code>SingleCastBulkByCustomerId = 900002009;</code>
      */
-    const TopicDelete = 900002009;
+    const SingleCastBulkByCustomerId = 900002009;
     /**
-     *发布
+     *订阅某几个主题
      *
-     * Generated from protobuf enum <code>TopicPublish = 900002010;</code>
+     * Generated from protobuf enum <code>TopicSubscribe = 900002010;</code>
      */
-    const TopicPublish = 900002010;
+    const TopicSubscribe = 900002010;
     /**
-     *批量发布
+     *取消订阅某几个主题
      *
-     * Generated from protobuf enum <code>TopicPublishBulk = 900002013;</code>
+     * Generated from protobuf enum <code>TopicUnsubscribe = 900002011;</code>
      */
-    const TopicPublishBulk = 900002013;
+    const TopicUnsubscribe = 900002011;
     /**
-     *强制关闭某个连接
+     *删除某几个主题
      *
-     * Generated from protobuf enum <code>ForceOffline = 900002011;</code>
+     * Generated from protobuf enum <code>TopicDelete = 900002012;</code>
      */
-    const ForceOffline = 900002011;
+    const TopicDelete = 900002012;
     /**
-     *强制关闭某个空session值的连接
+     *给某几个主题发布信息,一份消息发布到多个主题
      *
-     * Generated from protobuf enum <code>ForceOfflineGuest = 900002012;</code>
+     * Generated from protobuf enum <code>TopicPublish = 900002013;</code>
      */
-    const ForceOfflineGuest = 900002012;
+    const TopicPublish = 900002013;
+    /**
+     *批量发布到某几个主题,多份消息发布到多个主题，或者多份消息发布到一个主题
+     *
+     * Generated from protobuf enum <code>TopicPublishBulk = 900002014;</code>
+     */
+    const TopicPublishBulk = 900002014;
+    /**
+     *强制关闭某几个连接
+     *
+     * Generated from protobuf enum <code>ForceOffline = 900002015;</code>
+     */
+    const ForceOffline = 900002015;
+    /**
+     *强制关闭某几个客户的所有连接
+     *
+     * Generated from protobuf enum <code>ForceOfflineByCustomerId = 900002016;</code>
+     */
+    const ForceOfflineByCustomerId = 900002016;
+    /**
+     *强制关闭某几个空session、空customerId的连接
+     *
+     * Generated from protobuf enum <code>ForceOfflineGuest = 900002017;</code>
+     */
+    const ForceOfflineGuest = 900002017;
     /**
      *--------------------------------business请求worker的指令，worker会响应business 开始--------------------------------
      *
@@ -122,77 +146,101 @@ class Cmd
      */
     const Register = 900003001;
     /**
-     *取消注册，取消后不会再收到客户信息
+     *业务进程向网关的worker服务器发出取消注册指令，取消注册成功后，业务进程不会再收到客户端websocket消息
      *
      * Generated from protobuf enum <code>Unregister = 900003002;</code>
      */
     const Unregister = 900003002;
     /**
-     *判断uniqId是否在网关中
+     *判断某几个uniqId是否在在线，有则返回uniqId值
      *
      * Generated from protobuf enum <code>CheckOnline = 900003003;</code>
      */
     const CheckOnline = 900003003;
     /**
+     *获取网关中全部的customerId
+     *
+     * Generated from protobuf enum <code>CustomerIdList = 900003004;</code>
+     */
+    const CustomerIdList = 900003004;
+    /**
+     *获取网关中customerId的数量
+     *
+     * Generated from protobuf enum <code>CustomerIdCount = 900003005;</code>
+     */
+    const CustomerIdCount = 900003005;
+    /**
      *获取网关中全部的uniqId
      *
-     * Generated from protobuf enum <code>UniqIdList = 900003004;</code>
+     * Generated from protobuf enum <code>UniqIdList = 900003006;</code>
      */
-    const UniqIdList = 900003004;
+    const UniqIdList = 900003006;
     /**
      *获取网关中uniqId的数量
      *
-     * Generated from protobuf enum <code>UniqIdCount = 900003005;</code>
+     * Generated from protobuf enum <code>UniqIdCount = 900003007;</code>
      */
-    const UniqIdCount = 900003005;
-    /**
-     *获取网关中的主题数量
-     *
-     * Generated from protobuf enum <code>TopicCount = 900003006;</code>
-     */
-    const TopicCount = 900003006;
+    const UniqIdCount = 900003007;
     /**
      *获取网关中的主题
      *
-     * Generated from protobuf enum <code>TopicList = 900003007;</code>
+     * Generated from protobuf enum <code>TopicList = 900003008;</code>
      */
-    const TopicList = 900003007;
+    const TopicList = 900003008;
+    /**
+     *获取网关中的主题数量
+     *
+     * Generated from protobuf enum <code>TopicCount = 900003009;</code>
+     */
+    const TopicCount = 900003009;
     /**
      *获取网关中某个主题包含的uniqId
      *
-     * Generated from protobuf enum <code>TopicUniqIdList = 900003008;</code>
+     * Generated from protobuf enum <code>TopicUniqIdList = 900003010;</code>
      */
-    const TopicUniqIdList = 900003008;
+    const TopicUniqIdList = 900003010;
     /**
      *获取网关中的主题包含的连接数
      *
-     * Generated from protobuf enum <code>TopicUniqIdCount = 900003009;</code>
+     * Generated from protobuf enum <code>TopicUniqIdCount = 900003011;</code>
      */
-    const TopicUniqIdCount = 900003009;
+    const TopicUniqIdCount = 900003011;
+    /**
+     *获取网关中某几个主题的customerId
+     *
+     * Generated from protobuf enum <code>TopicCustomerIdList = 900003012;</code>
+     */
+    const TopicCustomerIdList = 900003012;
+    /**
+     *获取网关某个主题的customerId数量
+     *
+     * Generated from protobuf enum <code>TopicCustomerIdCount = 900003013;</code>
+     */
+    const TopicCustomerIdCount = 900003013;
     /**
      *获取连接的信息
      *
-     * Generated from protobuf enum <code>ConnInfo = 900003010;</code>
+     * Generated from protobuf enum <code>ConnInfo = 900003014;</code>
      */
-    const ConnInfo = 900003010;
+    const ConnInfo = 900003014;
+    /**
+     *获取连接的信息
+     *
+     * Generated from protobuf enum <code>ConnInfoByCustomerId = 900003015;</code>
+     */
+    const ConnInfoByCustomerId = 900003015;
     /**
      *获取网关统计的服务状态
      *
-     * Generated from protobuf enum <code>Metrics = 900003011;</code>
+     * Generated from protobuf enum <code>Metrics = 900003016;</code>
      */
-    const Metrics = 900003011;
+    const Metrics = 900003016;
     /**
      *更新限流配置、获取网关中的限流配置的真实情况
      *
-     * Generated from protobuf enum <code>Limit = 900003012;</code>
+     * Generated from protobuf enum <code>Limit = 900003017;</code>
      */
-    const Limit = 900003012;
-    /**
-     *连接打开时，传递自定义uniqId时的校验token，用后即删，必须是一个随机性很强的字符串
-     *
-     * Generated from protobuf enum <code>ConnOpenCustomUniqIdToken = 900003013;</code>
-     */
-    const ConnOpenCustomUniqIdToken = 900003013;
+    const Limit = 900003017;
 
     private static $valueToName = [
         self::Placeholder => 'Placeholder',
@@ -203,28 +251,36 @@ class Cmd
         self::ConnInfoDelete => 'ConnInfoDelete',
         self::Broadcast => 'Broadcast',
         self::Multicast => 'Multicast',
+        self::MulticastByCustomerId => 'MulticastByCustomerId',
         self::SingleCast => 'SingleCast',
         self::SingleCastBulk => 'SingleCastBulk',
+        self::SingleCastByCustomerId => 'SingleCastByCustomerId',
+        self::SingleCastBulkByCustomerId => 'SingleCastBulkByCustomerId',
         self::TopicSubscribe => 'TopicSubscribe',
         self::TopicUnsubscribe => 'TopicUnsubscribe',
         self::TopicDelete => 'TopicDelete',
         self::TopicPublish => 'TopicPublish',
         self::TopicPublishBulk => 'TopicPublishBulk',
         self::ForceOffline => 'ForceOffline',
+        self::ForceOfflineByCustomerId => 'ForceOfflineByCustomerId',
         self::ForceOfflineGuest => 'ForceOfflineGuest',
         self::Register => 'Register',
         self::Unregister => 'Unregister',
         self::CheckOnline => 'CheckOnline',
+        self::CustomerIdList => 'CustomerIdList',
+        self::CustomerIdCount => 'CustomerIdCount',
         self::UniqIdList => 'UniqIdList',
         self::UniqIdCount => 'UniqIdCount',
-        self::TopicCount => 'TopicCount',
         self::TopicList => 'TopicList',
+        self::TopicCount => 'TopicCount',
         self::TopicUniqIdList => 'TopicUniqIdList',
         self::TopicUniqIdCount => 'TopicUniqIdCount',
+        self::TopicCustomerIdList => 'TopicCustomerIdList',
+        self::TopicCustomerIdCount => 'TopicCustomerIdCount',
         self::ConnInfo => 'ConnInfo',
+        self::ConnInfoByCustomerId => 'ConnInfoByCustomerId',
         self::Metrics => 'Metrics',
         self::Limit => 'Limit',
-        self::ConnOpenCustomUniqIdToken => 'ConnOpenCustomUniqIdToken',
     ];
 
     public static function name($value)

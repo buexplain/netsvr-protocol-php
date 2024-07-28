@@ -16,13 +16,16 @@ class ConnOpen
         }
         $pool->internalAddGeneratedFile(
             '
-¬
-connOpen.protonetsvr.connOpen"X
+Ñ
+connOpen.protonetsvr.connOpen"}
 ConnOpen
 uniqId (	
 rawQuery (	
 subProtocol (	
-xForwardedFor (	B\'Znetsvr/ÊNetsvrâNetsvr\\GPBMetadatabproto3'
+xForwardedFor (	
+xRealIp (	
+
+remoteAddr (	B\'Znetsvr/ÊNetsvrâNetsvr\\GPBMetadatabproto3'
         , true);
 
         static::$is_initialized = true;

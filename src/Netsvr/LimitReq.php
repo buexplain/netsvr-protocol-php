@@ -10,18 +10,25 @@ use Google\Protobuf\Internal\GPBUtil;
 
 /**
  *更新网关服务的限流配置，并返回网关中的最新的限流配置
- *这个配置操作不是永久生效的，网关进程重启后就以config.toml为准
+ *如果设置一个无效的并发数，则会忽略这个配置
+ *这个配置操作不是永久生效的，网关进程重启后就以netsvr.toml为准
  *
  * Generated from protobuf message <code>netsvr.limitReq.LimitReq</code>
  */
 class LimitReq extends \Google\Protobuf\Internal\Message
 {
     /**
-     *要更新的限流器
+     *网关允许每秒转发多少个连接打开事件到business进程
      *
-     * Generated from protobuf field <code>repeated .netsvr.limitReq.LimitReqItem items = 1;</code>
+     * Generated from protobuf field <code>int32 onOpen = 1;</code>
      */
-    private $items;
+    protected $onOpen = 0;
+    /**
+     *网关允许每秒转发多少个消息到business进程
+     *
+     * Generated from protobuf field <code>int32 onMessage = 2;</code>
+     */
+    protected $onMessage = 0;
 
     /**
      * Constructor.
@@ -29,8 +36,10 @@ class LimitReq extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Netsvr\LimitReqItem>|\Google\Protobuf\Internal\RepeatedField $items
-     *          要更新的限流器
+     *     @type int $onOpen
+     *          网关允许每秒转发多少个连接打开事件到business进程
+     *     @type int $onMessage
+     *          网关允许每秒转发多少个消息到business进程
      * }
      */
     public function __construct($data = NULL) {
@@ -39,27 +48,53 @@ class LimitReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *要更新的限流器
+     *网关允许每秒转发多少个连接打开事件到business进程
      *
-     * Generated from protobuf field <code>repeated .netsvr.limitReq.LimitReqItem items = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * Generated from protobuf field <code>int32 onOpen = 1;</code>
+     * @return int
      */
-    public function getItems()
+    public function getOnOpen()
     {
-        return $this->items;
+        return $this->onOpen;
     }
 
     /**
-     *要更新的限流器
+     *网关允许每秒转发多少个连接打开事件到business进程
      *
-     * Generated from protobuf field <code>repeated .netsvr.limitReq.LimitReqItem items = 1;</code>
-     * @param array<\Netsvr\LimitReqItem>|\Google\Protobuf\Internal\RepeatedField $var
+     * Generated from protobuf field <code>int32 onOpen = 1;</code>
+     * @param int $var
      * @return $this
      */
-    public function setItems($var)
+    public function setOnOpen($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Netsvr\LimitReqItem::class);
-        $this->items = $arr;
+        GPBUtil::checkInt32($var);
+        $this->onOpen = $var;
+
+        return $this;
+    }
+
+    /**
+     *网关允许每秒转发多少个消息到business进程
+     *
+     * Generated from protobuf field <code>int32 onMessage = 2;</code>
+     * @return int
+     */
+    public function getOnMessage()
+    {
+        return $this->onMessage;
+    }
+
+    /**
+     *网关允许每秒转发多少个消息到business进程
+     *
+     * Generated from protobuf field <code>int32 onMessage = 2;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setOnMessage($var)
+    {
+        GPBUtil::checkInt32($var);
+        $this->onMessage = $var;
 
         return $this;
     }

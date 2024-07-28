@@ -16,13 +16,13 @@ class ConnInfoDelete
         }
         $pool->internalAddGeneratedFile(
             '
-Ç
-connInfoDelete.protonetsvr.connInfoDelete"g
+Ë
+connInfoDelete.protonetsvr.connInfoDelete"k
 ConnInfoDelete
-uniqId (	
-	delUniqId (
+uniqId (	
 
-delSession (
+delSession (
+delCustomerId (
 delTopic (
 data (B\'Znetsvr/ÊNetsvrâNetsvr\\GPBMetadatabproto3'
         , true);

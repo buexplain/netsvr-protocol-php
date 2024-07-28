@@ -24,29 +24,22 @@ class RegisterRespCode
      */
     const UnmarshalError = 1;
     /**
-     *workerId配置错误，溢出允许的范围
+     *需要接收的事件设置错误
      *
-     * Generated from protobuf enum <code>WorkerIdOverflow = 2;</code>
+     * Generated from protobuf enum <code>InvalidEvent = 2;</code>
      */
-    const WorkerIdOverflow = 2;
+    const InvalidEvent = 2;
     /**
-     *serverId配置错误，与网关配置的不一致
+     *连接已经注册过，不允许重复发起注册请求
      *
-     * Generated from protobuf enum <code>ServerIdInconsistent = 3;</code>
+     * Generated from protobuf enum <code>DuplicateRegister = 3;</code>
      */
-    const ServerIdInconsistent = 3;
-    /**
-     *已经注册过，不允许重复发起注册请求
-     *
-     * Generated from protobuf enum <code>DuplicateRegister = 4;</code>
-     */
-    const DuplicateRegister = 4;
+    const DuplicateRegister = 3;
 
     private static $valueToName = [
         self::Success => 'Success',
         self::UnmarshalError => 'UnmarshalError',
-        self::WorkerIdOverflow => 'WorkerIdOverflow',
-        self::ServerIdInconsistent => 'ServerIdInconsistent',
+        self::InvalidEvent => 'InvalidEvent',
         self::DuplicateRegister => 'DuplicateRegister',
     ];
 

@@ -21,6 +21,24 @@ class ConnInfoReq extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated string uniqIds = 1;</code>
      */
     private $uniqIds;
+    /**
+     *是否获取session
+     *
+     * Generated from protobuf field <code>bool reqSession = 2;</code>
+     */
+    protected $reqSession = false;
+    /**
+     *是否获取customerId
+     *
+     * Generated from protobuf field <code>bool reqCustomerId = 3;</code>
+     */
+    protected $reqCustomerId = false;
+    /**
+     *是否获取topic
+     *
+     * Generated from protobuf field <code>bool reqTopic = 4;</code>
+     */
+    protected $reqTopic = false;
 
     /**
      * Constructor.
@@ -30,6 +48,12 @@ class ConnInfoReq extends \Google\Protobuf\Internal\Message
      *
      *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $uniqIds
      *          目标uniqId
+     *     @type bool $reqSession
+     *          是否获取session
+     *     @type bool $reqCustomerId
+     *          是否获取customerId
+     *     @type bool $reqTopic
+     *          是否获取topic
      * }
      */
     public function __construct($data = NULL) {
@@ -59,6 +83,84 @@ class ConnInfoReq extends \Google\Protobuf\Internal\Message
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->uniqIds = $arr;
+
+        return $this;
+    }
+
+    /**
+     *是否获取session
+     *
+     * Generated from protobuf field <code>bool reqSession = 2;</code>
+     * @return bool
+     */
+    public function getReqSession()
+    {
+        return $this->reqSession;
+    }
+
+    /**
+     *是否获取session
+     *
+     * Generated from protobuf field <code>bool reqSession = 2;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setReqSession($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->reqSession = $var;
+
+        return $this;
+    }
+
+    /**
+     *是否获取customerId
+     *
+     * Generated from protobuf field <code>bool reqCustomerId = 3;</code>
+     * @return bool
+     */
+    public function getReqCustomerId()
+    {
+        return $this->reqCustomerId;
+    }
+
+    /**
+     *是否获取customerId
+     *
+     * Generated from protobuf field <code>bool reqCustomerId = 3;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setReqCustomerId($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->reqCustomerId = $var;
+
+        return $this;
+    }
+
+    /**
+     *是否获取topic
+     *
+     * Generated from protobuf field <code>bool reqTopic = 4;</code>
+     * @return bool
+     */
+    public function getReqTopic()
+    {
+        return $this->reqTopic;
+    }
+
+    /**
+     *是否获取topic
+     *
+     * Generated from protobuf field <code>bool reqTopic = 4;</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setReqTopic($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->reqTopic = $var;
 
         return $this;
     }

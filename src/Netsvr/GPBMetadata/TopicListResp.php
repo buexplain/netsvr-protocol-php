@@ -16,11 +16,10 @@ class TopicListResp
         }
         $pool->internalAddGeneratedFile(
             '
-è
-topicListResp.protonetsvr.topicListResp"1
-TopicListResp
-serverId (
-topics (	B\'Znetsvr/ Netsvr‚Netsvr\\GPBMetadatabproto3'
+}
+topicListResp.protonetsvr.topicListResp"
+TopicListResp
+topics (	B\'Znetsvr/ Netsvr‚Netsvr\\GPBMetadatabproto3'
         , true);
 
         static::$is_initialized = true;

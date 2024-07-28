@@ -16,17 +16,17 @@ use Google\Protobuf\Internal\GPBUtil;
 class LimitResp extends \Google\Protobuf\Internal\Message
 {
     /**
-     *网关唯一编号
+     *网关允许每秒转发多少个连接打开事件到business进程
      *
-     * Generated from protobuf field <code>int32 serverId = 1;</code>
+     * Generated from protobuf field <code>int32 onOpen = 1;</code>
      */
-    protected $serverId = 0;
+    protected $onOpen = 0;
     /**
-     *网关服务中的限流器列表
+     *网关允许每秒转发多少个消息到business进程
      *
-     * Generated from protobuf field <code>repeated .netsvr.limitResp.LimitRespItem items = 2;</code>
+     * Generated from protobuf field <code>int32 onMessage = 2;</code>
      */
-    private $items;
+    protected $onMessage = 0;
 
     /**
      * Constructor.
@@ -34,10 +34,10 @@ class LimitResp extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int $serverId
-     *          网关唯一编号
-     *     @type array<\Netsvr\LimitRespItem>|\Google\Protobuf\Internal\RepeatedField $items
-     *          网关服务中的限流器列表
+     *     @type int $onOpen
+     *          网关允许每秒转发多少个连接打开事件到business进程
+     *     @type int $onMessage
+     *          网关允许每秒转发多少个消息到business进程
      * }
      */
     public function __construct($data = NULL) {
@@ -46,53 +46,53 @@ class LimitResp extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *网关唯一编号
+     *网关允许每秒转发多少个连接打开事件到business进程
      *
-     * Generated from protobuf field <code>int32 serverId = 1;</code>
+     * Generated from protobuf field <code>int32 onOpen = 1;</code>
      * @return int
      */
-    public function getServerId()
+    public function getOnOpen()
     {
-        return $this->serverId;
+        return $this->onOpen;
     }
 
     /**
-     *网关唯一编号
+     *网关允许每秒转发多少个连接打开事件到business进程
      *
-     * Generated from protobuf field <code>int32 serverId = 1;</code>
+     * Generated from protobuf field <code>int32 onOpen = 1;</code>
      * @param int $var
      * @return $this
      */
-    public function setServerId($var)
+    public function setOnOpen($var)
     {
         GPBUtil::checkInt32($var);
-        $this->serverId = $var;
+        $this->onOpen = $var;
 
         return $this;
     }
 
     /**
-     *网关服务中的限流器列表
+     *网关允许每秒转发多少个消息到business进程
      *
-     * Generated from protobuf field <code>repeated .netsvr.limitResp.LimitRespItem items = 2;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * Generated from protobuf field <code>int32 onMessage = 2;</code>
+     * @return int
      */
-    public function getItems()
+    public function getOnMessage()
     {
-        return $this->items;
+        return $this->onMessage;
     }
 
     /**
-     *网关服务中的限流器列表
+     *网关允许每秒转发多少个消息到business进程
      *
-     * Generated from protobuf field <code>repeated .netsvr.limitResp.LimitRespItem items = 2;</code>
-     * @param array<\Netsvr\LimitRespItem>|\Google\Protobuf\Internal\RepeatedField $var
+     * Generated from protobuf field <code>int32 onMessage = 2;</code>
+     * @param int $var
      * @return $this
      */
-    public function setItems($var)
+    public function setOnMessage($var)
     {
-        $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \Netsvr\LimitRespItem::class);
-        $this->items = $arr;
+        GPBUtil::checkInt32($var);
+        $this->onMessage = $var;
 
         return $this;
     }

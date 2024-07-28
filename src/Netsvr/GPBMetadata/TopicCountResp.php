@@ -16,11 +16,10 @@ class TopicCountResp
         }
         $pool->internalAddGeneratedFile(
             '
-‘
-topicCountResp.protonetsvr.topicCountResp"1
-TopicCountResp
-serverId (
-count (B\'Znetsvr/ÊNetsvrâNetsvr\\GPBMetadatabproto3'
+
+topicCountResp.protonetsvr.topicCountResp"
+TopicCountResp
+count (B\'Znetsvr/ÊNetsvrâNetsvr\\GPBMetadatabproto3'
         , true);
 
         static::$is_initialized = true;

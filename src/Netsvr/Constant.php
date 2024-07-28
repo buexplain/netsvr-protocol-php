@@ -15,6 +15,8 @@
  * limitations under the License.
  */
 
+declare(strict_types=1);
+
 namespace Netsvr;
 
 /**
@@ -22,11 +24,9 @@ namespace Netsvr;
  */
 class Constant
 {
-    //发起心跳字符串
-    const PING_MESSAGE = "~3yPvmnz~";
-    //响应心跳的字符串
-    const PONG_MESSAGE = "~u38NvZ~";
-    //business的worker id的编号范围
+    //发起心跳的字符串
+    const HeartbeatMessage = "~3yPvmnzu38NZv~";
+    //business的workerId的编号范围
     const WORKER_ID_MAX = 999;
     const WORKER_ID_MIN = 1;
 }

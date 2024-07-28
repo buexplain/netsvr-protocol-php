@@ -16,12 +16,11 @@ class RegisterReq
         }
         $pool->internalAddGeneratedFile(
             '
-«
-registerReq.protonetsvr.registerReq"Q
-RegisterReq
-workerId (
-processCmdGoroutineNum (
-serverId (B\'Znetsvr/ÊNetsvrâNetsvr\\GPBMetadatabproto3'
+—
+registerReq.protonetsvr.registerReq"=
+RegisterReq
+events (
+processCmdGoroutineNum (B\'Znetsvr/ÊNetsvrâNetsvr\\GPBMetadatabproto3'
         , true);
 
         static::$is_initialized = true;

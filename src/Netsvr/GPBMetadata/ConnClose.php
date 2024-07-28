@@ -16,11 +16,14 @@ class ConnClose
         }
         $pool->internalAddGeneratedFile(
             '
-‚
-connClose.protonetsvr.connClose",
+¦
+connClose.protonetsvr.connClose"P
 	ConnClose
-uniqId (	
-session (	B\'Znetsvr/ÊNetsvrâNetsvr\\GPBMetadatabproto3'
+uniqId (	
+
+customerId (	
+session (	
+topics (	B\'Znetsvr/ÊNetsvrâNetsvr\\GPBMetadatabproto3'
         , true);
 
         static::$is_initialized = true;

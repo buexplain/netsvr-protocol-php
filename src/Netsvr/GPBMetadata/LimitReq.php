@@ -16,13 +16,11 @@ class LimitReq
         }
         $pool->internalAddGeneratedFile(
             '
-ø
-limitReq.protonetsvr.limitReq"8
-LimitReq,
-items (2.netsvr.limitReq.LimitReqItem"1
-LimitReqItem
-name (	
-concurrency (B\'Znetsvr/ Netsvr‚Netsvr\\GPBMetadatabproto3'
+Å
+limitReq.protonetsvr.limitReq"-
+LimitReq
+onOpen (
+	onMessage (B\'Znetsvr/ Netsvr‚Netsvr\\GPBMetadatabproto3'
         , true);
 
         static::$is_initialized = true;

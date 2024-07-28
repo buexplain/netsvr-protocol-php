@@ -16,11 +16,10 @@ class TopicUniqIdCountResp
         }
         $pool->internalAddGeneratedFile(
             '
-ê
-topicUniqIdCountResp.protonetsvr.topicUniqIdCountResp"£
-TopicUniqIdCountResp
-serverId (K
-items (2<.netsvr.topicUniqIdCountResp.TopicUniqIdCountResp.ItemsEntry,
+˛
+topicUniqIdCountResp.protonetsvr.topicUniqIdCountResp"ë
+TopicUniqIdCountRespK
+items (2<.netsvr.topicUniqIdCountResp.TopicUniqIdCountResp.ItemsEntry,
 
 ItemsEntry
 key (	

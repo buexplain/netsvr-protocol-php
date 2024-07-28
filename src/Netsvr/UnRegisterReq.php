@@ -16,13 +16,11 @@ use Google\Protobuf\Internal\GPBUtil;
 class UnRegisterReq extends \Google\Protobuf\Internal\Message
 {
     /**
-     * Generated from protobuf field <code>int32 workerId = 1;</code>
+     *连接id
+     *
+     * Generated from protobuf field <code>string connId = 1;</code>
      */
-    protected $workerId = 0;
-    /**
-     * Generated from protobuf field <code>string registerId = 2;</code>
-     */
-    protected $registerId = '';
+    protected $connId = '';
 
     /**
      * Constructor.
@@ -30,8 +28,8 @@ class UnRegisterReq extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int $workerId
-     *     @type string $registerId
+     *     @type string $connId
+     *          连接id
      * }
      */
     public function __construct($data = NULL) {
@@ -40,45 +38,27 @@ class UnRegisterReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Generated from protobuf field <code>int32 workerId = 1;</code>
-     * @return int
-     */
-    public function getWorkerId()
-    {
-        return $this->workerId;
-    }
-
-    /**
-     * Generated from protobuf field <code>int32 workerId = 1;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setWorkerId($var)
-    {
-        GPBUtil::checkInt32($var);
-        $this->workerId = $var;
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>string registerId = 2;</code>
+     *连接id
+     *
+     * Generated from protobuf field <code>string connId = 1;</code>
      * @return string
      */
-    public function getRegisterId()
+    public function getConnId()
     {
-        return $this->registerId;
+        return $this->connId;
     }
 
     /**
-     * Generated from protobuf field <code>string registerId = 2;</code>
+     *连接id
+     *
+     * Generated from protobuf field <code>string connId = 1;</code>
      * @param string $var
      * @return $this
      */
-    public function setRegisterId($var)
+    public function setConnId($var)
     {
         GPBUtil::checkString($var, True);
-        $this->registerId = $var;
+        $this->connId = $var;
 
         return $this;
     }

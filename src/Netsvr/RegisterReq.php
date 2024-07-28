@@ -18,12 +18,11 @@ use Google\Protobuf\Internal\GPBUtil;
 class RegisterReq extends \Google\Protobuf\Internal\Message
 {
     /**
-     *workerId，取值区间是：[1,999]
-     *业务层可以自己随意安排，如果多个business共用一个workerId，则网关在数据转发的过程中是轮询转发给business的
+     *表示business进程可以接收的事件，如果要接收多个，则按位或，具体的枚举值可以查看event.proto
      *
-     * Generated from protobuf field <code>int32 workerId = 1;</code>
+     * Generated from protobuf field <code>int32 events = 1;</code>
      */
-    protected $workerId = 0;
+    protected $events = 0;
     /**
      *该参数表示接下来，需要worker服务器开启多少协程来处理本business的请求
      *如果本business，非常频繁的与worker交互,并且是那种组播、广播的耗时操作
@@ -34,12 +33,6 @@ class RegisterReq extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>uint32 processCmdGoroutineNum = 2;</code>
      */
     protected $processCmdGoroutineNum = 0;
-    /**
-     *网关唯一编号，如果该值与网关配置的值对不上号，网关会返回失败的信息
-     *
-     * Generated from protobuf field <code>uint32 serverId = 3;</code>
-     */
-    protected $serverId = 0;
 
     /**
      * Constructor.
@@ -47,17 +40,14 @@ class RegisterReq extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int $workerId
-     *          workerId，取值区间是：[1,999]
-     *          业务层可以自己随意安排，如果多个business共用一个workerId，则网关在数据转发的过程中是轮询转发给business的
+     *     @type int $events
+     *          表示business进程可以接收的事件，如果要接收多个，则按位或，具体的枚举值可以查看event.proto
      *     @type int $processCmdGoroutineNum
      *          该参数表示接下来，需要worker服务器开启多少协程来处理本business的请求
      *          如果本business，非常频繁的与worker交互,并且是那种组播、广播的耗时操作
      *          可以考虑开大一点，但是也不能无限大，开太多也许不能解决问题，因为发送消息到客户连接是会被阻塞的，建议5~100条左右即可
      *          请根据业务，实际压测一下试试，找到最佳的数量
      *          请注意worker默认已经开启了一条协程来处理本business的请求，所以该值只有在大于1的时候才会开启更多协程
-     *     @type int $serverId
-     *          网关唯一编号，如果该值与网关配置的值对不上号，网关会返回失败的信息
      * }
      */
     public function __construct($data = NULL) {
@@ -66,29 +56,27 @@ class RegisterReq extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *workerId，取值区间是：[1,999]
-     *业务层可以自己随意安排，如果多个business共用一个workerId，则网关在数据转发的过程中是轮询转发给business的
+     *表示business进程可以接收的事件，如果要接收多个，则按位或，具体的枚举值可以查看event.proto
      *
-     * Generated from protobuf field <code>int32 workerId = 1;</code>
+     * Generated from protobuf field <code>int32 events = 1;</code>
      * @return int
      */
-    public function getWorkerId()
+    public function getEvents()
     {
-        return $this->workerId;
+        return $this->events;
     }
 
     /**
-     *workerId，取值区间是：[1,999]
-     *业务层可以自己随意安排，如果多个business共用一个workerId，则网关在数据转发的过程中是轮询转发给business的
+     *表示business进程可以接收的事件，如果要接收多个，则按位或，具体的枚举值可以查看event.proto
      *
-     * Generated from protobuf field <code>int32 workerId = 1;</code>
+     * Generated from protobuf field <code>int32 events = 1;</code>
      * @param int $var
      * @return $this
      */
-    public function setWorkerId($var)
+    public function setEvents($var)
     {
         GPBUtil::checkInt32($var);
-        $this->workerId = $var;
+        $this->events = $var;
 
         return $this;
     }
@@ -123,32 +111,6 @@ class RegisterReq extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkUint32($var);
         $this->processCmdGoroutineNum = $var;
-
-        return $this;
-    }
-
-    /**
-     *网关唯一编号，如果该值与网关配置的值对不上号，网关会返回失败的信息
-     *
-     * Generated from protobuf field <code>uint32 serverId = 3;</code>
-     * @return int
-     */
-    public function getServerId()
-    {
-        return $this->serverId;
-    }
-
-    /**
-     *网关唯一编号，如果该值与网关配置的值对不上号，网关会返回失败的信息
-     *
-     * Generated from protobuf field <code>uint32 serverId = 3;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setServerId($var)
-    {
-        GPBUtil::checkUint32($var);
-        $this->serverId = $var;
 
         return $this;
     }

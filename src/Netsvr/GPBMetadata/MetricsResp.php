@@ -16,25 +16,26 @@ class MetricsResp
         }
         $pool->internalAddGeneratedFile(
             '
-·
-metricsResp.protonetsvr.metricsResp"­
-MetricsResp
-serverId (9
-items (2*.netsvr.metricsResp.MetricsResp.ItemsEntryQ
+³
+metricsResp.protonetsvr.metricsResp"›
+MetricsResp9
+items (2*.netsvr.metricsResp.MetricsResp.ItemsEntryQ
 
 ItemsEntry
 key (2
-value (2#.netsvr.metricsResp.MetricsRespItem:8"¬
-MetricsRespItem
-count (
-meanRate (
-meanRateMax (
-rate1 (
-rate1Max (
-rate5 (
-rate5Max (
-rate15 (
-	rate15Max	 (B\'Znetsvr/ÊNetsvrâNetsvr\\GPBMetadatabproto3'
+value (2#.netsvr.metricsResp.MetricsRespItem:8"º
+MetricsRespItem
+item (
+count (
+meanRate (
+meanRateMax (
+rate1 (
+rate1Max (
+rate5 (
+rate5Max (
+rate15	 (
+	rate15Max
+ (B\'Znetsvr/ÊNetsvrâNetsvr\\GPBMetadatabproto3'
         , true);
 
         static::$is_initialized = true;

@@ -20,9 +20,15 @@ class ConnInfoRespItem extends \Google\Protobuf\Internal\Message
      */
     protected $session = '';
     /**
+     *当前连接绑定的客户id
+     *
+     * Generated from protobuf field <code>string customerId = 2;</code>
+     */
+    protected $customerId = '';
+    /**
      *当前连接订阅的主题
      *
-     * Generated from protobuf field <code>repeated string topics = 2;</code>
+     * Generated from protobuf field <code>repeated string topics = 3;</code>
      */
     private $topics;
 
@@ -34,6 +40,8 @@ class ConnInfoRespItem extends \Google\Protobuf\Internal\Message
      *
      *     @type string $session
      *          当前连接的session
+     *     @type string $customerId
+     *          当前连接绑定的客户id
      *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $topics
      *          当前连接订阅的主题
      * }
@@ -70,9 +78,35 @@ class ConnInfoRespItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
+     *当前连接绑定的客户id
+     *
+     * Generated from protobuf field <code>string customerId = 2;</code>
+     * @return string
+     */
+    public function getCustomerId()
+    {
+        return $this->customerId;
+    }
+
+    /**
+     *当前连接绑定的客户id
+     *
+     * Generated from protobuf field <code>string customerId = 2;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setCustomerId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->customerId = $var;
+
+        return $this;
+    }
+
+    /**
      *当前连接订阅的主题
      *
-     * Generated from protobuf field <code>repeated string topics = 2;</code>
+     * Generated from protobuf field <code>repeated string topics = 3;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getTopics()
@@ -83,7 +117,7 @@ class ConnInfoRespItem extends \Google\Protobuf\Internal\Message
     /**
      *当前连接订阅的主题
      *
-     * Generated from protobuf field <code>repeated string topics = 2;</code>
+     * Generated from protobuf field <code>repeated string topics = 3;</code>
      * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */

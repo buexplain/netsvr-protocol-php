@@ -22,7 +22,7 @@ class ForceOffline extends \Google\Protobuf\Internal\Message
      */
     private $uniqIds;
     /**
-     *需要发给客户的数据，有这个数据，则转发给该连接，并在3秒倒计时后强制关闭连接，反之，立马关闭连接
+     *需要发给客户的数据，有这个数据，则转发给该连接，并在100毫秒倒计时后强制关闭连接，反之，立马关闭连接
      *
      * Generated from protobuf field <code>bytes data = 2;</code>
      */
@@ -37,7 +37,7 @@ class ForceOffline extends \Google\Protobuf\Internal\Message
      *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $uniqIds
      *          目标uniqId
      *     @type string $data
-     *          需要发给客户的数据，有这个数据，则转发给该连接，并在3秒倒计时后强制关闭连接，反之，立马关闭连接
+     *          需要发给客户的数据，有这个数据，则转发给该连接，并在100毫秒倒计时后强制关闭连接，反之，立马关闭连接
      * }
      */
     public function __construct($data = NULL) {
@@ -72,7 +72,7 @@ class ForceOffline extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *需要发给客户的数据，有这个数据，则转发给该连接，并在3秒倒计时后强制关闭连接，反之，立马关闭连接
+     *需要发给客户的数据，有这个数据，则转发给该连接，并在100毫秒倒计时后强制关闭连接，反之，立马关闭连接
      *
      * Generated from protobuf field <code>bytes data = 2;</code>
      * @return string
@@ -83,7 +83,7 @@ class ForceOffline extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *需要发给客户的数据，有这个数据，则转发给该连接，并在3秒倒计时后强制关闭连接，反之，立马关闭连接
+     *需要发给客户的数据，有这个数据，则转发给该连接，并在100毫秒倒计时后强制关闭连接，反之，立马关闭连接
      *
      * Generated from protobuf field <code>bytes data = 2;</code>
      * @param string $var

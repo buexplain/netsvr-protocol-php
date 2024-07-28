@@ -16,15 +16,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class UniqIdCountResp extends \Google\Protobuf\Internal\Message
 {
     /**
-     *网关唯一编号
-     *
-     * Generated from protobuf field <code>int32 serverId = 1;</code>
-     */
-    protected $serverId = 0;
-    /**
      *网关中uniqId的数量
      *
-     * Generated from protobuf field <code>int32 count = 2;</code>
+     * Generated from protobuf field <code>int32 count = 1;</code>
      */
     protected $count = 0;
 
@@ -34,8 +28,6 @@ class UniqIdCountResp extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int $serverId
-     *          网关唯一编号
      *     @type int $count
      *          网关中uniqId的数量
      * }
@@ -46,35 +38,9 @@ class UniqIdCountResp extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *网关唯一编号
-     *
-     * Generated from protobuf field <code>int32 serverId = 1;</code>
-     * @return int
-     */
-    public function getServerId()
-    {
-        return $this->serverId;
-    }
-
-    /**
-     *网关唯一编号
-     *
-     * Generated from protobuf field <code>int32 serverId = 1;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setServerId($var)
-    {
-        GPBUtil::checkInt32($var);
-        $this->serverId = $var;
-
-        return $this;
-    }
-
-    /**
      *网关中uniqId的数量
      *
-     * Generated from protobuf field <code>int32 count = 2;</code>
+     * Generated from protobuf field <code>int32 count = 1;</code>
      * @return int
      */
     public function getCount()
@@ -85,7 +51,7 @@ class UniqIdCountResp extends \Google\Protobuf\Internal\Message
     /**
      *网关中uniqId的数量
      *
-     * Generated from protobuf field <code>int32 count = 2;</code>
+     * Generated from protobuf field <code>int32 count = 1;</code>
      * @param int $var
      * @return $this
      */

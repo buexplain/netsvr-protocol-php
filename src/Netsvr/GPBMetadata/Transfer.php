@@ -16,12 +16,15 @@ class Transfer
         }
         $pool->internalAddGeneratedFile(
             '
-ç
-transfer.protonetsvr.transfer"9
+±
+transfer.protonetsvr.transfer"]
 Transfer
-uniqId (	
-session (	
-data (B\'Znetsvr/ Netsvr‚Netsvr\\GPBMetadatabproto3'
+uniqId (	
+
+customerId (	
+session (	
+topics (	
+data (B\'Znetsvr/ Netsvr‚Netsvr\\GPBMetadatabproto3'
         , true);
 
         static::$is_initialized = true;

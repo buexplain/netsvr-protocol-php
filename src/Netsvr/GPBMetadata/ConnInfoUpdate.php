@@ -16,14 +16,13 @@ class ConnInfoUpdate
         }
         $pool->internalAddGeneratedFile(
             '
-é
-connInfoUpdate.protonetsvr.connInfoUpdate"ˆ
+Ì
+connInfoUpdate.protonetsvr.connInfoUpdate"l
 ConnInfoUpdate
-uniqId (	
-	newUniqId (	
-dataAsNewUniqIdExisted (
+uniqId (	
 
-newSession (	
+newSession (	
+newCustomerId (	
 	newTopics (	
 data (B\'Znetsvr/ÊNetsvrâNetsvr\\GPBMetadatabproto3'
         , true);

@@ -16,12 +16,10 @@ class UnRegisterReq
         }
         $pool->internalAddGeneratedFile(
             '
-“
-unRegisterReq.protonetsvr.unRegisterReq"5
-UnRegisterReq
-workerId (
-
-registerId (	B\'Znetsvr/ÊNetsvrâNetsvr\\GPBMetadatabproto3'
+}
+unRegisterReq.protonetsvr.unRegisterReq"
+UnRegisterReq
+connId (	B\'Znetsvr/ÊNetsvrâNetsvr\\GPBMetadatabproto3'
         , true);
 
         static::$is_initialized = true;

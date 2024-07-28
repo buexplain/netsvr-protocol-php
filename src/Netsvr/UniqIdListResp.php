@@ -16,15 +16,9 @@ use Google\Protobuf\Internal\GPBUtil;
 class UniqIdListResp extends \Google\Protobuf\Internal\Message
 {
     /**
-     *网关唯一编号
-     *
-     * Generated from protobuf field <code>int32 serverId = 1;</code>
-     */
-    protected $serverId = 0;
-    /**
      *网关包含的uniqId
      *
-     * Generated from protobuf field <code>repeated string uniqIds = 2;</code>
+     * Generated from protobuf field <code>repeated string uniqIds = 1;</code>
      */
     private $uniqIds;
 
@@ -34,8 +28,6 @@ class UniqIdListResp extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type int $serverId
-     *          网关唯一编号
      *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $uniqIds
      *          网关包含的uniqId
      * }
@@ -46,35 +38,9 @@ class UniqIdListResp extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *网关唯一编号
-     *
-     * Generated from protobuf field <code>int32 serverId = 1;</code>
-     * @return int
-     */
-    public function getServerId()
-    {
-        return $this->serverId;
-    }
-
-    /**
-     *网关唯一编号
-     *
-     * Generated from protobuf field <code>int32 serverId = 1;</code>
-     * @param int $var
-     * @return $this
-     */
-    public function setServerId($var)
-    {
-        GPBUtil::checkInt32($var);
-        $this->serverId = $var;
-
-        return $this;
-    }
-
-    /**
      *网关包含的uniqId
      *
-     * Generated from protobuf field <code>repeated string uniqIds = 2;</code>
+     * Generated from protobuf field <code>repeated string uniqIds = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getUniqIds()
@@ -85,7 +51,7 @@ class UniqIdListResp extends \Google\Protobuf\Internal\Message
     /**
      *网关包含的uniqId
      *
-     * Generated from protobuf field <code>repeated string uniqIds = 2;</code>
+     * Generated from protobuf field <code>repeated string uniqIds = 1;</code>
      * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
      * @return $this
      */

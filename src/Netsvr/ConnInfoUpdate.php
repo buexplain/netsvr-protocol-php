@@ -22,23 +22,17 @@ class ConnInfoUpdate extends \Google\Protobuf\Internal\Message
      */
     protected $uniqId = '';
     /**
-     *新的uniqId，传递了则覆盖
+     *新的session，传递了丢弃现有的，赋予新的
      *
-     * Generated from protobuf field <code>string newUniqId = 2;</code>
-     */
-    protected $newUniqId = '';
-    /**
-     *新的uniqId冲突的时候，需要转发给已经存在的连接的数据，有这个数据，则转发给该连接，并在3秒倒计时后强制关闭该连接，反之，立马关闭该连接
-     *
-     * Generated from protobuf field <code>bytes dataAsNewUniqIdExisted = 3;</code>
-     */
-    protected $dataAsNewUniqIdExisted = '';
-    /**
-     *新的session，传递了则覆盖
-     *
-     * Generated from protobuf field <code>string newSession = 4;</code>
+     * Generated from protobuf field <code>string newSession = 3;</code>
      */
     protected $newSession = '';
+    /**
+     *新的客户id，传递了丢弃现有的，赋予新的
+     *
+     * Generated from protobuf field <code>string newCustomerId = 4;</code>
+     */
+    protected $newCustomerId = '';
     /**
      *新的主题，传递了丢弃现有的，赋予新的
      *
@@ -60,12 +54,10 @@ class ConnInfoUpdate extends \Google\Protobuf\Internal\Message
      *
      *     @type string $uniqId
      *          目标uniqId
-     *     @type string $newUniqId
-     *          新的uniqId，传递了则覆盖
-     *     @type string $dataAsNewUniqIdExisted
-     *          新的uniqId冲突的时候，需要转发给已经存在的连接的数据，有这个数据，则转发给该连接，并在3秒倒计时后强制关闭该连接，反之，立马关闭该连接
      *     @type string $newSession
-     *          新的session，传递了则覆盖
+     *          新的session，传递了丢弃现有的，赋予新的
+     *     @type string $newCustomerId
+     *          新的客户id，传递了丢弃现有的，赋予新的
      *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $newTopics
      *          新的主题，传递了丢弃现有的，赋予新的
      *     @type string $data
@@ -104,61 +96,9 @@ class ConnInfoUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *新的uniqId，传递了则覆盖
+     *新的session，传递了丢弃现有的，赋予新的
      *
-     * Generated from protobuf field <code>string newUniqId = 2;</code>
-     * @return string
-     */
-    public function getNewUniqId()
-    {
-        return $this->newUniqId;
-    }
-
-    /**
-     *新的uniqId，传递了则覆盖
-     *
-     * Generated from protobuf field <code>string newUniqId = 2;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setNewUniqId($var)
-    {
-        GPBUtil::checkString($var, True);
-        $this->newUniqId = $var;
-
-        return $this;
-    }
-
-    /**
-     *新的uniqId冲突的时候，需要转发给已经存在的连接的数据，有这个数据，则转发给该连接，并在3秒倒计时后强制关闭该连接，反之，立马关闭该连接
-     *
-     * Generated from protobuf field <code>bytes dataAsNewUniqIdExisted = 3;</code>
-     * @return string
-     */
-    public function getDataAsNewUniqIdExisted()
-    {
-        return $this->dataAsNewUniqIdExisted;
-    }
-
-    /**
-     *新的uniqId冲突的时候，需要转发给已经存在的连接的数据，有这个数据，则转发给该连接，并在3秒倒计时后强制关闭该连接，反之，立马关闭该连接
-     *
-     * Generated from protobuf field <code>bytes dataAsNewUniqIdExisted = 3;</code>
-     * @param string $var
-     * @return $this
-     */
-    public function setDataAsNewUniqIdExisted($var)
-    {
-        GPBUtil::checkString($var, False);
-        $this->dataAsNewUniqIdExisted = $var;
-
-        return $this;
-    }
-
-    /**
-     *新的session，传递了则覆盖
-     *
-     * Generated from protobuf field <code>string newSession = 4;</code>
+     * Generated from protobuf field <code>string newSession = 3;</code>
      * @return string
      */
     public function getNewSession()
@@ -167,9 +107,9 @@ class ConnInfoUpdate extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *新的session，传递了则覆盖
+     *新的session，传递了丢弃现有的，赋予新的
      *
-     * Generated from protobuf field <code>string newSession = 4;</code>
+     * Generated from protobuf field <code>string newSession = 3;</code>
      * @param string $var
      * @return $this
      */
@@ -177,6 +117,32 @@ class ConnInfoUpdate extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->newSession = $var;
+
+        return $this;
+    }
+
+    /**
+     *新的客户id，传递了丢弃现有的，赋予新的
+     *
+     * Generated from protobuf field <code>string newCustomerId = 4;</code>
+     * @return string
+     */
+    public function getNewCustomerId()
+    {
+        return $this->newCustomerId;
+    }
+
+    /**
+     *新的客户id，传递了丢弃现有的，赋予新的
+     *
+     * Generated from protobuf field <code>string newCustomerId = 4;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setNewCustomerId($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->newCustomerId = $var;
 
         return $this;
     }

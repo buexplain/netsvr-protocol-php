@@ -16,7 +16,11 @@ use Google\Protobuf\Internal\GPBUtil;
 class ConnOpen extends \Google\Protobuf\Internal\Message
 {
     /**
-     *网关分配给连接的唯一id，格式是：网关服务编号(2个字符)+时间戳(8个字符)+自增值(8个字符)，共18个16进制的字符
+     *网关分配给连接的唯一id，格式是：网关进程的worker服务监听的ip地址(4字节)+网关进程的worker服务监听的port(2字节)+时间戳(4字节)+自增id(4字节)，共14字节，28个16进制的字符
+     * php解码uniqId示例：
+     * $ret =  unpack('Nip/nport/Ntimestamp/NincrId', pack('H*', '7f00000117ad6621e43b8baa1b9a'));
+     * $ret['ip'] = long2ip($ret['ip']);
+     * var_dump($ret);
      *
      * Generated from protobuf field <code>string uniqId = 1;</code>
      */
@@ -28,17 +32,29 @@ class ConnOpen extends \Google\Protobuf\Internal\Message
      */
     protected $rawQuery = '';
     /**
-     *连接的websocket子协议信息
+     *连接携带的websocket子协议信息
      *
      * Generated from protobuf field <code>repeated string subProtocol = 3;</code>
      */
     private $subProtocol;
     /**
-     *X-Forwarded-For，如果网关没有从header中拿到X-Forwarded-For的数据，则会赋值与本网关进程直连的客户端ip
+     *读取的header：X-Forwarded-For
      *
      * Generated from protobuf field <code>string xForwardedFor = 4;</code>
      */
     protected $xForwardedFor = '';
+    /**
+     *读取的header：X-Real-IP
+     *
+     * Generated from protobuf field <code>string xRealIp = 5;</code>
+     */
+    protected $xRealIp = '';
+    /**
+     *连接的IP地址，这是直接连接到网关的IP地址
+     *
+     * Generated from protobuf field <code>string remoteAddr = 6;</code>
+     */
+    protected $remoteAddr = '';
 
     /**
      * Constructor.
@@ -47,13 +63,21 @@ class ConnOpen extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type string $uniqId
-     *          网关分配给连接的唯一id，格式是：网关服务编号(2个字符)+时间戳(8个字符)+自增值(8个字符)，共18个16进制的字符
+     *          网关分配给连接的唯一id，格式是：网关进程的worker服务监听的ip地址(4字节)+网关进程的worker服务监听的port(2字节)+时间戳(4字节)+自增id(4字节)，共14字节，28个16进制的字符
+     *           php解码uniqId示例：
+     *           $ret =  unpack('Nip/nport/Ntimestamp/NincrId', pack('H*', '7f00000117ad6621e43b8baa1b9a'));
+     *           $ret['ip'] = long2ip($ret['ip']);
+     *           var_dump($ret);
      *     @type string $rawQuery
      *          连接携带的GET参数
      *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $subProtocol
-     *          连接的websocket子协议信息
+     *          连接携带的websocket子协议信息
      *     @type string $xForwardedFor
-     *          X-Forwarded-For，如果网关没有从header中拿到X-Forwarded-For的数据，则会赋值与本网关进程直连的客户端ip
+     *          读取的header：X-Forwarded-For
+     *     @type string $xRealIp
+     *          读取的header：X-Real-IP
+     *     @type string $remoteAddr
+     *          连接的IP地址，这是直接连接到网关的IP地址
      * }
      */
     public function __construct($data = NULL) {
@@ -62,7 +86,11 @@ class ConnOpen extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *网关分配给连接的唯一id，格式是：网关服务编号(2个字符)+时间戳(8个字符)+自增值(8个字符)，共18个16进制的字符
+     *网关分配给连接的唯一id，格式是：网关进程的worker服务监听的ip地址(4字节)+网关进程的worker服务监听的port(2字节)+时间戳(4字节)+自增id(4字节)，共14字节，28个16进制的字符
+     * php解码uniqId示例：
+     * $ret =  unpack('Nip/nport/Ntimestamp/NincrId', pack('H*', '7f00000117ad6621e43b8baa1b9a'));
+     * $ret['ip'] = long2ip($ret['ip']);
+     * var_dump($ret);
      *
      * Generated from protobuf field <code>string uniqId = 1;</code>
      * @return string
@@ -73,7 +101,11 @@ class ConnOpen extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *网关分配给连接的唯一id，格式是：网关服务编号(2个字符)+时间戳(8个字符)+自增值(8个字符)，共18个16进制的字符
+     *网关分配给连接的唯一id，格式是：网关进程的worker服务监听的ip地址(4字节)+网关进程的worker服务监听的port(2字节)+时间戳(4字节)+自增id(4字节)，共14字节，28个16进制的字符
+     * php解码uniqId示例：
+     * $ret =  unpack('Nip/nport/Ntimestamp/NincrId', pack('H*', '7f00000117ad6621e43b8baa1b9a'));
+     * $ret['ip'] = long2ip($ret['ip']);
+     * var_dump($ret);
      *
      * Generated from protobuf field <code>string uniqId = 1;</code>
      * @param string $var
@@ -114,7 +146,7 @@ class ConnOpen extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *连接的websocket子协议信息
+     *连接携带的websocket子协议信息
      *
      * Generated from protobuf field <code>repeated string subProtocol = 3;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -125,7 +157,7 @@ class ConnOpen extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *连接的websocket子协议信息
+     *连接携带的websocket子协议信息
      *
      * Generated from protobuf field <code>repeated string subProtocol = 3;</code>
      * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
@@ -140,7 +172,7 @@ class ConnOpen extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *X-Forwarded-For，如果网关没有从header中拿到X-Forwarded-For的数据，则会赋值与本网关进程直连的客户端ip
+     *读取的header：X-Forwarded-For
      *
      * Generated from protobuf field <code>string xForwardedFor = 4;</code>
      * @return string
@@ -151,7 +183,7 @@ class ConnOpen extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *X-Forwarded-For，如果网关没有从header中拿到X-Forwarded-For的数据，则会赋值与本网关进程直连的客户端ip
+     *读取的header：X-Forwarded-For
      *
      * Generated from protobuf field <code>string xForwardedFor = 4;</code>
      * @param string $var
@@ -161,6 +193,58 @@ class ConnOpen extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkString($var, True);
         $this->xForwardedFor = $var;
+
+        return $this;
+    }
+
+    /**
+     *读取的header：X-Real-IP
+     *
+     * Generated from protobuf field <code>string xRealIp = 5;</code>
+     * @return string
+     */
+    public function getXRealIp()
+    {
+        return $this->xRealIp;
+    }
+
+    /**
+     *读取的header：X-Real-IP
+     *
+     * Generated from protobuf field <code>string xRealIp = 5;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setXRealIp($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->xRealIp = $var;
+
+        return $this;
+    }
+
+    /**
+     *连接的IP地址，这是直接连接到网关的IP地址
+     *
+     * Generated from protobuf field <code>string remoteAddr = 6;</code>
+     * @return string
+     */
+    public function getRemoteAddr()
+    {
+        return $this->remoteAddr;
+    }
+
+    /**
+     *连接的IP地址，这是直接连接到网关的IP地址
+     *
+     * Generated from protobuf field <code>string remoteAddr = 6;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setRemoteAddr($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->remoteAddr = $var;
 
         return $this;
     }

@@ -20,59 +20,35 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
      */
     protected $item = 0;
     /**
-     *总数
+     *returns the count of events at the time the snapshot was taken.
      *
      * Generated from protobuf field <code>int64 count = 2;</code>
      */
     protected $count = 0;
     /**
-     *每秒速率
+     * returns the meter's mean rate of events per second at the time the snapshot was taken.
      *
      * Generated from protobuf field <code>float meanRate = 3;</code>
      */
     protected $meanRate = 0.0;
     /**
-     *每秒速率的最大值
-     *
-     * Generated from protobuf field <code>float meanRateMax = 4;</code>
-     */
-    protected $meanRateMax = 0.0;
-    /**
-     *每1分钟速率
+     * Rate1 returns the one-minute moving average rate of events per second at the time the snapshot was taken.
      *
      * Generated from protobuf field <code>float rate1 = 5;</code>
      */
     protected $rate1 = 0.0;
     /**
-     *每1分钟速率的最大值
-     *
-     * Generated from protobuf field <code>float rate1Max = 6;</code>
-     */
-    protected $rate1Max = 0.0;
-    /**
-     *每5分钟速率
+     * Rate5 returns the five-minute moving average rate of events per second at the time the snapshot was taken.
      *
      * Generated from protobuf field <code>float rate5 = 7;</code>
      */
     protected $rate5 = 0.0;
     /**
-     *每5分钟速率的最大值
-     *
-     * Generated from protobuf field <code>float rate5Max = 8;</code>
-     */
-    protected $rate5Max = 0.0;
-    /**
-     *每15分钟速率
+     * Rate15 returns the fifteen-minute moving average rate of events per second at the time the snapshot was taken.
      *
      * Generated from protobuf field <code>float rate15 = 9;</code>
      */
     protected $rate15 = 0.0;
-    /**
-     *每15分钟速率的最大值
-     *
-     * Generated from protobuf field <code>float rate15Max = 10;</code>
-     */
-    protected $rate15Max = 0.0;
 
     /**
      * Constructor.
@@ -83,23 +59,15 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
      *     @type int $item
      *          统计的项
      *     @type int|string $count
-     *          总数
+     *          returns the count of events at the time the snapshot was taken.
      *     @type float $meanRate
-     *          每秒速率
-     *     @type float $meanRateMax
-     *          每秒速率的最大值
+     *           returns the meter's mean rate of events per second at the time the snapshot was taken.
      *     @type float $rate1
-     *          每1分钟速率
-     *     @type float $rate1Max
-     *          每1分钟速率的最大值
+     *           Rate1 returns the one-minute moving average rate of events per second at the time the snapshot was taken.
      *     @type float $rate5
-     *          每5分钟速率
-     *     @type float $rate5Max
-     *          每5分钟速率的最大值
+     *           Rate5 returns the five-minute moving average rate of events per second at the time the snapshot was taken.
      *     @type float $rate15
-     *          每15分钟速率
-     *     @type float $rate15Max
-     *          每15分钟速率的最大值
+     *           Rate15 returns the fifteen-minute moving average rate of events per second at the time the snapshot was taken.
      * }
      */
     public function __construct($data = NULL) {
@@ -134,7 +102,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *总数
+     *returns the count of events at the time the snapshot was taken.
      *
      * Generated from protobuf field <code>int64 count = 2;</code>
      * @return int|string
@@ -145,7 +113,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *总数
+     *returns the count of events at the time the snapshot was taken.
      *
      * Generated from protobuf field <code>int64 count = 2;</code>
      * @param int|string $var
@@ -160,7 +128,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *每秒速率
+     * returns the meter's mean rate of events per second at the time the snapshot was taken.
      *
      * Generated from protobuf field <code>float meanRate = 3;</code>
      * @return float
@@ -171,7 +139,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *每秒速率
+     * returns the meter's mean rate of events per second at the time the snapshot was taken.
      *
      * Generated from protobuf field <code>float meanRate = 3;</code>
      * @param float $var
@@ -186,33 +154,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *每秒速率的最大值
-     *
-     * Generated from protobuf field <code>float meanRateMax = 4;</code>
-     * @return float
-     */
-    public function getMeanRateMax()
-    {
-        return $this->meanRateMax;
-    }
-
-    /**
-     *每秒速率的最大值
-     *
-     * Generated from protobuf field <code>float meanRateMax = 4;</code>
-     * @param float $var
-     * @return $this
-     */
-    public function setMeanRateMax($var)
-    {
-        GPBUtil::checkFloat($var);
-        $this->meanRateMax = $var;
-
-        return $this;
-    }
-
-    /**
-     *每1分钟速率
+     * Rate1 returns the one-minute moving average rate of events per second at the time the snapshot was taken.
      *
      * Generated from protobuf field <code>float rate1 = 5;</code>
      * @return float
@@ -223,7 +165,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *每1分钟速率
+     * Rate1 returns the one-minute moving average rate of events per second at the time the snapshot was taken.
      *
      * Generated from protobuf field <code>float rate1 = 5;</code>
      * @param float $var
@@ -238,33 +180,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *每1分钟速率的最大值
-     *
-     * Generated from protobuf field <code>float rate1Max = 6;</code>
-     * @return float
-     */
-    public function getRate1Max()
-    {
-        return $this->rate1Max;
-    }
-
-    /**
-     *每1分钟速率的最大值
-     *
-     * Generated from protobuf field <code>float rate1Max = 6;</code>
-     * @param float $var
-     * @return $this
-     */
-    public function setRate1Max($var)
-    {
-        GPBUtil::checkFloat($var);
-        $this->rate1Max = $var;
-
-        return $this;
-    }
-
-    /**
-     *每5分钟速率
+     * Rate5 returns the five-minute moving average rate of events per second at the time the snapshot was taken.
      *
      * Generated from protobuf field <code>float rate5 = 7;</code>
      * @return float
@@ -275,7 +191,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *每5分钟速率
+     * Rate5 returns the five-minute moving average rate of events per second at the time the snapshot was taken.
      *
      * Generated from protobuf field <code>float rate5 = 7;</code>
      * @param float $var
@@ -290,33 +206,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *每5分钟速率的最大值
-     *
-     * Generated from protobuf field <code>float rate5Max = 8;</code>
-     * @return float
-     */
-    public function getRate5Max()
-    {
-        return $this->rate5Max;
-    }
-
-    /**
-     *每5分钟速率的最大值
-     *
-     * Generated from protobuf field <code>float rate5Max = 8;</code>
-     * @param float $var
-     * @return $this
-     */
-    public function setRate5Max($var)
-    {
-        GPBUtil::checkFloat($var);
-        $this->rate5Max = $var;
-
-        return $this;
-    }
-
-    /**
-     *每15分钟速率
+     * Rate15 returns the fifteen-minute moving average rate of events per second at the time the snapshot was taken.
      *
      * Generated from protobuf field <code>float rate15 = 9;</code>
      * @return float
@@ -327,7 +217,7 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *每15分钟速率
+     * Rate15 returns the fifteen-minute moving average rate of events per second at the time the snapshot was taken.
      *
      * Generated from protobuf field <code>float rate15 = 9;</code>
      * @param float $var
@@ -337,32 +227,6 @@ class MetricsRespItem extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkFloat($var);
         $this->rate15 = $var;
-
-        return $this;
-    }
-
-    /**
-     *每15分钟速率的最大值
-     *
-     * Generated from protobuf field <code>float rate15Max = 10;</code>
-     * @return float
-     */
-    public function getRate15Max()
-    {
-        return $this->rate15Max;
-    }
-
-    /**
-     *每15分钟速率的最大值
-     *
-     * Generated from protobuf field <code>float rate15Max = 10;</code>
-     * @param float $var
-     * @return $this
-     */
-    public function setRate15Max($var)
-    {
-        GPBUtil::checkFloat($var);
-        $this->rate15Max = $var;
 
         return $this;
     }

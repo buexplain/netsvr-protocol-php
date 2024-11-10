@@ -212,35 +212,41 @@ class Cmd
      */
     const TopicCustomerIdList = 900003012;
     /**
+     *获取网关中某几个主题的customerId以及对应的uniqId列表
+     *
+     * Generated from protobuf enum <code>TopicCustomerIdToUniqIdsList = 900003013;</code>
+     */
+    const TopicCustomerIdToUniqIdsList = 900003013;
+    /**
      *获取网关某个主题的customerId数量
      *
-     * Generated from protobuf enum <code>TopicCustomerIdCount = 900003013;</code>
+     * Generated from protobuf enum <code>TopicCustomerIdCount = 900003014;</code>
      */
-    const TopicCustomerIdCount = 900003013;
+    const TopicCustomerIdCount = 900003014;
     /**
      *获取连接的信息
      *
-     * Generated from protobuf enum <code>ConnInfo = 900003014;</code>
+     * Generated from protobuf enum <code>ConnInfo = 900003015;</code>
      */
-    const ConnInfo = 900003014;
+    const ConnInfo = 900003015;
     /**
      *获取连接的信息
      *
-     * Generated from protobuf enum <code>ConnInfoByCustomerId = 900003015;</code>
+     * Generated from protobuf enum <code>ConnInfoByCustomerId = 900003016;</code>
      */
-    const ConnInfoByCustomerId = 900003015;
+    const ConnInfoByCustomerId = 900003016;
     /**
      *获取网关统计的服务状态
      *
-     * Generated from protobuf enum <code>Metrics = 900003016;</code>
+     * Generated from protobuf enum <code>Metrics = 900003017;</code>
      */
-    const Metrics = 900003016;
+    const Metrics = 900003017;
     /**
      *更新限流配置、获取网关中的限流配置的真实情况
      *
-     * Generated from protobuf enum <code>Limit = 900003017;</code>
+     * Generated from protobuf enum <code>Limit = 900003018;</code>
      */
-    const Limit = 900003017;
+    const Limit = 900003018;
 
     private static $valueToName = [
         self::Placeholder => 'Placeholder',
@@ -276,6 +282,7 @@ class Cmd
         self::TopicUniqIdList => 'TopicUniqIdList',
         self::TopicUniqIdCount => 'TopicUniqIdCount',
         self::TopicCustomerIdList => 'TopicCustomerIdList',
+        self::TopicCustomerIdToUniqIdsList => 'TopicCustomerIdToUniqIdsList',
         self::TopicCustomerIdCount => 'TopicCustomerIdCount',
         self::ConnInfo => 'ConnInfo',
         self::ConnInfoByCustomerId => 'ConnInfoByCustomerId',

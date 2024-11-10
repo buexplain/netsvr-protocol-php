@@ -14,7 +14,7 @@ use Google\Protobuf\Internal\GPBUtil;
 class TopicCustomerIdListRespItem extends \Google\Protobuf\Internal\Message
 {
     /**
-     *当前customerId包含的uniqId
+     *当前topic包含的customerId
      *
      * Generated from protobuf field <code>repeated string customerIds = 1;</code>
      */
@@ -27,7 +27,7 @@ class TopicCustomerIdListRespItem extends \Google\Protobuf\Internal\Message
      *     Optional. Data for populating the Message object.
      *
      *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $customerIds
-     *          当前customerId包含的uniqId
+     *          当前topic包含的customerId
      * }
      */
     public function __construct($data = NULL) {
@@ -36,7 +36,7 @@ class TopicCustomerIdListRespItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *当前customerId包含的uniqId
+     *当前topic包含的customerId
      *
      * Generated from protobuf field <code>repeated string customerIds = 1;</code>
      * @return \Google\Protobuf\Internal\RepeatedField
@@ -47,7 +47,7 @@ class TopicCustomerIdListRespItem extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     *当前customerId包含的uniqId
+     *当前topic包含的customerId
      *
      * Generated from protobuf field <code>repeated string customerIds = 1;</code>
      * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var

@@ -1,12 +1,8 @@
 #!/bin/bash
 
 # 删除旧的代码
-for file in ./src/Netsvr/*; do
-  if [[ "$file" == *"Constant.php" ]]; then
-    continue;
-  fi
+for file in ./src/NetsvrProtocol/*; do
   rm -rf "$file";
-
 done
 
 # 更新依赖包

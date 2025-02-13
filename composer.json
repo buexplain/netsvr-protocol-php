@@ -12,11 +12,11 @@
     "php": ">=8.0"
   },
   "require-dev": {
-    "buexplain/netsvr-protocol": "^v4.0.0"
+    "buexplain/netsvr-protocol": "^v5.0.0"
   },
   "autoload": {
     "psr-4": {
-      "Netsvr\\": "src/Netsvr/"
+      "NetsvrProtocol\\": "src/NetsvrProtocol/"
     }
   }
 }

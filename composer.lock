@@ -4,28 +4,22 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2d1516e0e20a7e7ba92676f5f35614c8",
+    "content-hash": "5b24e8445f977bc841b168a82b757855",
     "packages": [],
     "packages-dev": [
         {
             "name": "buexplain/netsvr-protocol",
-            "version": "v5.0.0",
+            "version": "v5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/buexplain/netsvr-protocol.git",
-                "reference": "4197eab174e3011d0c4240d416992deedd52c360"
+                "reference": "5ea9131af80d1e0c3d69bd5ebb1a7155ce98d180"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/buexplain/netsvr-protocol/zipball/4197eab174e3011d0c4240d416992deedd52c360",
-                "reference": "4197eab174e3011d0c4240d416992deedd52c360",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
+                "url": "https://api.github.com/repos/buexplain/netsvr-protocol/zipball/5ea9131af80d1e0c3d69bd5ebb1a7155ce98d180",
+                "reference": "5ea9131af80d1e0c3d69bd5ebb1a7155ce98d180",
+                "shasum": ""
             },
             "require": {
                 "php": ">=8.0"
@@ -44,9 +38,9 @@
             "description": "https://github.com/buexplain/netsvr的协议",
             "support": {
                 "issues": "https://github.com/buexplain/netsvr-protocol/issues",
-                "source": "https://github.com/buexplain/netsvr-protocol/tree/v5.0.0"
+                "source": "https://github.com/buexplain/netsvr-protocol/tree/v5.1.0"
             },
-            "time": "2025-02-10T10:12:33+00:00"
+            "time": "2025-07-10T14:43:21+00:00"
         }
     ],
     "aliases": [],
